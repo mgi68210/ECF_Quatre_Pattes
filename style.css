@@ -340,7 +340,7 @@ nav a:hover {
   height: 400px;
   border-radius: 10px; /* Arrondit légèrement les coins */
   overflow: hidden;
-  margin: 10px; /* Ajoute une petite marge */
+  margin: 5px; /* Ajoute une petite marge */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
@@ -359,30 +359,30 @@ nav a:hover {
   left: 0;
   width: 100%;
   color: white;
-  padding: 20px;
   text-align: left;
   border-radius: 0 0 10px 10px; /* Arrondi seulement en bas */
+  padding-left: 10px; 
+  padding-bottom: 10px; 
 }
 
 /* Conteneur des images miniatures */
 .thumbnail-container {
   display: flex;
   justify-content: space-between;
-  gap: 10px; 
   width: 100%;
   max-width: 100%;
-  margin-top: 10px;
 }
 
 /* container qui possède des éléments avec images miniatures */
 .thumbnail {
   position: relative;
-  width: calc(100% / 3 - 20px); /* Ajuste la largeur pour inclure les marges */
+  width: 100%;
+  /* Ajuste la largeur pour inclure les marges */
   height: 140px;
   border-radius: 10px; 
   overflow: hidden;
   cursor: pointer;
-  margin: 10px; 
+  margin: 5px; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ombre légère */
 }
 
@@ -399,13 +399,15 @@ nav a:hover {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
   color: white;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
+
+
 /* SECTION 5 */
+
 .section5 {
   background-color: #eafaf1;
   margin: 0;
@@ -477,96 +479,124 @@ h2 {
 }
 
 /* SECTION 5 PARTIE 2 */
+/* Impact Section */
+
 .impact-section {
-  width: 100%; /* Ajustement pour éviter le dépassement */
-  max-width: 1200px;
-  margin: 0 auto 40px; /* Ajout d'une marge pour l'espacement */
+  width: 100vw; /* Fixer la largeur à 100% de la fenêtre */
+  max-width: 100%;
+  margin: 20px 0;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* S'assurer qu'elle suit le flux normal */
 }
 
+/* style titre de section impact */
+.impact-section h2 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* container impact */
 .impact-stats {
   display: flex;
-  flex-wrap: wrap; /* Permettre le passage en colonne sur petits écrans */
-  justify-content: center;
+  justify-content: space-evenly; /* Espacement égal entre les éléments */
   text-align: center;
   width: 100%;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 20px; 
+  margin-top: 50px;
 }
 
+/* elements dans le container impact-stats */
 .impact-stats div {
-  flex: 1 1 30%;
+  flex: 1 1 30%; /* Chaque élément prend environ 30% de la largeur de la page */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
-  min-width: 250px;
+  min-width: 280px; /* Fixer une largeur minimale */
 }
 
+/* elements + icons dans le container impact-stats */
 .impact-stats .impact-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 10px;
 }
 
+/* les éléments textes p */
+.impact-stats div p {
+  margin: 5px;
+}
+
+/* les éléments textes bold */
 .bold-text {
   font-weight: bold;
 }
 
+
+
 /* SECTION 6 */
+/* Container principal */
 .container6 {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100vw;
+  max-width: 100%;
   overflow: hidden;
   text-align: center;
   background-color: #f8f8f8;
   padding: 40px 20px;
-  position: relative;
 }
 
+/* Container des trois box testimonial */
 .testimonials {
   display: flex;
-  flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
-  justify-content: center;
-  gap: 20px;
+  flex-direction: row; 
+  justify-content: space-evenly; /* Espacement égal entre les témoignages */
+  gap: 20px; 
   width: 100%;
 }
 
+/* box testimonial */
 .testimonial {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  flex: 1 1 30%;
+  flex: 1 1 30%; /* Chaque box prend environ 30% de la largeur de l'écran */
   display: flex;
   flex-direction: column;
-  min-width: 250px;
+  min-width: 280px; 
 }
-
+/* Image dans le testimonial */
 .testimonial img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; 
+  object-fit: cover; 
 }
 
+/* Texte du témoignage */
 .testimonial-text {
   padding: 15px;
   font-size: 14px;
   color: #555;
-  text-align: left;
-  flex-grow: 1;
+  text-align: left; 
+  margin: 0; 
+  flex-grow: 1;  /* Permet au texte de prendre l'espace restant */
 }
 
+/* Auteur du témoignage */
 .testimonial-author {
   padding: 0 15px 15px;
   font-size: 14px;
   color: #333;
-  font-weight: bold;
-  text-align: left;
+  font-weight: bold; 
+  text-align: left;  
+  margin-top: 10px;  
+  margin-bottom: 0; /* Pas de marge en bas */
+}
+
+.testimonial-text,
+.testimonial-author {
+  margin: 0; /* Supprimer toute marge par défaut */
 }
 
 
@@ -810,15 +840,64 @@ h2 {
   }
 
   /* SECTION 5 - Impact */
-  .impact-stats,
-  .testimonials {
-    flex-direction: column;
-    align-items: center;
+  .impact-section {
+      width: 100%;
+      padding: 15px;
   }
-  .impact-stats div,
-  .testimonial {
-    width: 100%; /* Pour que chaque élément prenne toute la largeur */
+
+  .impact-stats {
+      flex-direction: column; 
+      align-items: center;
+      gap: 20px; 
   }
+
+  .impact-stats div {
+      width: 90%; /* Chaque élément prend toute la largeur */
+      min-width: auto;
+      text-align: center;
+  }
+
+  .impact-icon {
+      width: 35px;
+      height: 35px;
+  }
+
+  .impact-stats div p {
+      font-size: 14px;
+  }
+
+    /* SECTION 6 */
+    .container6 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Témoignages en colonne */
+    .testimonials {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+
+    .testimonial {
+        width: 90%; /* Ajustement pour éviter le débordement */
+        min-width: auto;
+    }
+
+    .testimonial img {
+        height: 180px; /* Ajuste la hauteur pour être responsive sur mobile */
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .testimonial-author {
+        font-size: 14px;
+        text-align: left;
+    }
+
 
 
   /* FOOTER */
