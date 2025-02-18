@@ -93,21 +93,34 @@ nav a:hover {
 
 /* Section 1 */
 
+
 .section1 {
+  position: relative;
   background-image: url(./images/Image\ haut\ de\ page.png);
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   height: 400px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: box-shadow 0.3s ease-in-out; 
 }
 
-.section1:hover {
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6); /* Ombre intérieure au survol */
+.section1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtre noir à 40% */
+}
+
+.h1s1, .p1s1 {
+  position: relative; /* Pour que le texte soit au-dessus du filtre */
+  z-index: 1;
 }
 
 
