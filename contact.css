@@ -16,83 +16,86 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-  }
-  
-  /* LOGO */
-  
-  .logo-header img {
+}
+
+/* LOGO */
+.logo-header img {
     width: 40px;
     height: 40px;
-  }
-  
-  .logo-header {
+}
+
+.logo-header {
     display: flex;
     align-items: center; 
     gap: 8px; 
-  }
-  
-  .logo {
+}
+
+.logo {
     font-weight: bold; 
     color: white; 
     font-size: 18px;
-  }
-  
-  /* CONTENU À DROITE */
-  .right-container {
+}
+
+/* CONTENU À DROITE */
+.right-container {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-  
-  /* MENU à droite pour liens internes */
-  nav {
+}
+
+/* MENU à droite pour liens internes */
+nav {
     display: flex;
-    gap: 15px;
-  }
-  
-  /* style des liens pour naviguer en interne  */
-  nav p {
+    align-items: center; 
+    gap: 15px; 
+}
+
+/* style des liens pour naviguer en interne  */
+nav p {
+    margin: 0; /* Retire les marges par défaut */
     color: white;
     font-size: 16px;
     cursor: pointer; /* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
-  }
-  
-  /*Style lien texte*/
-  nav a {
+}
+
+/*Style lien texte*/
+nav a {
     text-decoration: none;
     color: white; 
     font-size: 16px;
     cursor: pointer;
-  }
+}
+
 /*Style lien texte lors du survol */
-  nav a:hover {
+nav a:hover {
     text-decoration: underline; /* Ajoute le soulignement au survol */
-  }
-  
-  /* BOUTON DON */
-  .button {
+}
+
+/* BOUTON DON */
+.button {
     display: flex;
     align-items: center;
     background-color: #DB2727;
     color: white;
     border: none;
     border-radius: 10px;
-    padding: 8px 15px;
+    padding: 8px 15px; /* Ajuste le padding pour qu'il soit cohérent avec les éléments du nav */
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-  }
-  /* Icon coeur du bouton */
-  .button img {
+}
+
+/* Icon coeur du bouton */
+.button img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-  }
-  /* Effet sur le bouton lorsque le curseur survol */
-  .button:hover {
+}
+
+/* Effet sur le bouton lorsque le curseur survol */
+.button:hover {
     background-color: darkred;
-  }
-  
+}
   
 
 /* SECTION FORMULAIRE */

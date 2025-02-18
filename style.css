@@ -13,85 +13,94 @@ body {
 
 /* HEADER */
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 /* LOGO */
 .logo-header img {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .logo-header {
-  display: flex;
-  align-items: center; 
-  gap: 8px; 
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
 }
 
 .logo {
-  font-weight: bold; 
-  color: white; 
-  font-size: 18px; 
+    font-weight: bold; 
+    color: white; 
+    font-size: 18px;
 }
 
-/* CONTENU À DROITE DU HEADER*/
+/* CONTENU À DROITE */
 .right-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* MENU NAVIGATION DES PAGES INTERNES*/
+/* MENU à droite pour liens internes */
 nav {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
 }
 
+/* style des liens pour naviguer en interne  */
+nav p {
+    margin: 0; /* Retire les marges par défaut */
+    color: white;
+    font-size: 16px;
+    cursor: pointer; /* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
+}
+
+/*Style lien texte*/
 nav a {
-  text-decoration: none; 
-  color: white; 
-  font-size: 16px;
-  cursor: pointer;
+    text-decoration: none;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Décoration des liens lorsque le curseur le survol */
-
+/*Style lien texte lors du survol */
 nav a:hover {
-  text-decoration: underline; 
+    text-decoration: underline; /* Ajoute le soulignement au survol */
 }
 
-/* BOUTON DON A DROITE DU HEADER */
+/* BOUTON DON */
 .button {
-  display: flex;
-  align-items: center;
-  background-color: #DB2727;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 8px 15px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #DB2727;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px; /* Ajuste le padding pour qu'il soit cohérent avec les éléments du nav */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* ICON COEUR */
-
+/* Icon coeur du bouton */
 .button img {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 
-/* Décoration du bouton (change de couleur lors du survol du curseur */
-
+/* Effet sur le bouton lorsque le curseur survol */
 .button:hover {
-  background-color: darkred;
+    background-color: darkred;
 }
-
+  
 
 
 /* SECTION 1*/
@@ -154,7 +163,7 @@ nav a:hover {
 }
 
 /* Conteneur principal */
-.donation-box {
+.don-box {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -168,7 +177,7 @@ nav a:hover {
 }
 
 /* Cartes de dons */
-.donation-cards {
+.don-cards {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -176,7 +185,7 @@ nav a:hover {
 }
 
 /* Box choix don */
-.donation-card {
+.don-card {
   flex: 1;   /* spécifie l'ordre de l'élément, donation-card se trouve au dessus grâce à ça */
   padding: 15px;
   background-color: #ffffff;
@@ -188,19 +197,26 @@ nav a:hover {
 }
 
 /* Texte en gras */
-.donation-card strong {
+.don-card strong {
   font-size: 18px;
   display: block;
 }
+
+/* Texte en gras */
+.don-card p {
+  font-size: 13px;
+  display: block;
+  color: #555;
+}
 /* Choix du don par défaut */
-.donation-card.selected {
+.don-card.selected {
   background-color: #e9fff0;
   border: 2px solid #3cb371;
 }
 
 
 /* Options de dons dans un container */
-.donation-options {
+.don-options {
   margin: 20px 0;
   display: flex;
   justify-content: center;
@@ -224,7 +240,7 @@ nav a:hover {
 }
 
 /* Bouton principal */
-.donate-button {
+.don-button {
   background-color: #d63031;
   color: white;
   border: none;
@@ -240,14 +256,14 @@ nav a:hover {
 }
 
 /* Réduction de l’icône */
-.donate-button img {
+.don-button img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
 }
 
 /* Change de couleur lors du survol */
-.donate-button:hover {
+.don-button:hover {
   background-color: #c0392b;
 }
 
@@ -351,8 +367,20 @@ nav a:hover {
   object-fit: cover;
   border-radius: 10px; /* Arrondi les coins de l'image aussi */
 }
+/* FILTRE SUR LA BIG IMAGE  */
+.big-image-container::before {
+  content: ""; 
+  /* élément est généré, mais qu'il n'affichera aucun contenu */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtre noir à 40%(0.4) */
+}
 
 /* Overlay du texte */
+/* Affichage au-dessus du contenu principal  */
 .overlay {
   position: absolute;
   bottom: 0;
@@ -361,12 +389,28 @@ nav a:hover {
   color: white;
   text-align: left;
   border-radius: 0 0 10px 10px; /* Arrondi seulement en bas */
-  padding-left: 10px; 
-  padding-bottom: 10px; 
+  padding-left: 15px; 
+  padding-bottom: 30px; 
+}
+
+.title {
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+.description {
+  font-size: 14px; 
+  font-weight: normal;
+}
+
+.date {
+  font-size: 12px; 
+  font-weight: normal;
+  display: block; 
 }
 
 /* Conteneur des images miniatures */
-.thumbnail-container {
+.mini-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -374,7 +418,7 @@ nav a:hover {
 }
 
 /* container qui possède des éléments avec images miniatures */
-.thumbnail {
+.mini {
   position: relative;
   width: 100%;
   /* Ajuste la largeur pour inclure les marges */
@@ -387,7 +431,7 @@ nav a:hover {
 }
 
 /* images miniatures  */
-.thumbnail img {
+.mini img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -395,7 +439,7 @@ nav a:hover {
 }
 
 /* Texte centré dans les miniatures */
-.thumbnail p {
+.mini p {
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -404,7 +448,17 @@ nav a:hover {
   font-weight: bold;
   text-align: center;
 }
-
+/* FILTRE SUR LA BACKGROUND IMAGE  */
+.mini::before {
+  content: ""; 
+  /* élément est généré, mais qu'il n'affichera aucun contenu */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Filtre noir à 40%(0.4) */
+}
 
 /* SECTION 5 */
 
