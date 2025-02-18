@@ -633,3 +633,80 @@ h2 {
           width: 100%;
           max-width: 100%;
         }
+
+
+            /* RENDRE MA PAGE RESPONSIVE */
+
+    @media screen and (max-width: 768px) {
+      /* Pour situé tout l'en tête en colonne à gauche */
+      .header {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+      }
+  
+      /* Pour s'assurer que les liens internes sont bien situés à gauche */
+      .header-nav {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px; /* Espacement entre les liens */
+          width: 100%;
+      }
+  
+      /* Rendre le bouton responsive */
+      .button {
+          width: 100%; /* Prend toute la largeur disponible */
+          max-width: none; /* S'assure qu'il s'étire bien */
+          text-align: left; /* Alignement du texte */
+          display: flex;
+          align-items: center; /* Centre verticalement le contenu */
+          justify-content: flex-start; /* Aligne le texte et l'image à gauche */
+          background-color: #ff6b6b; 
+          color: white;
+          cursor: pointer; /*indique à l'utilisateur que c'est cliquable*/
+      }
+  
+      /* Ajustement du coeur à l'intérieur du bouton */
+      .button img {
+          width: 24px; 
+          height: auto;
+          margin-right: 8px; /* Espace entre le coeur et le texte */
+      }
+  
+      /* Pour que la div contenant le bouton prenne toute la largeur */
+      .right-container {
+          width: 100%;
+      }
+  
+
+/* SECTION 1 */
+.section1 {
+  background-size: cover; /* Ajuste l'image pour qu'elle remplisse la section sans marges */
+  background-position: center; /* Centre l'image */
+  height: auto; /* Ajuste la hauteur selon le contenu */
+  min-height: 400px; /* Définit une hauteur minimale */
+  padding: 20px; /* Ajoute un padding pour éviter que le texte touche les bords */
+}
+
+.h1s1 {
+  font-size: 28px; /* Réduit la taille du titre pour mobile */
+}
+
+.p1s1 {
+  font-size: 16px; /* Réduit la taille du texte pour mobile */
+}
+
+
+
+            /* Footer Aligner à gauche de la page*/
+            .footer {
+              display: flex;
+              flex-direction: column;
+              gap: 10px; /* Espacement entre les liens */
+              align-items: flex-start;
+          }
+      }
+      
+      
