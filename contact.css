@@ -91,3 +91,32 @@
   }
   
   
+
+
+
+     /* FOOTER*/
+
+     .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px; /* Augmentation de la marge */
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-column {
+        flex: 1;
+        padding: 0 20px; /* Ajout de marge entre les colonnes */
+    }
+    .footer-column h3 {
+        margin-top: 0;
+    }
+    .footer-column p, .footer-column a {
+        color: #fff;
+        text-decoration: none;
+        line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
+    }
+    .footer-column .contact-icon {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
