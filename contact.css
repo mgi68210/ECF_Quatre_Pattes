@@ -27,14 +27,14 @@
   
   .logo-header {
     display: flex;
-    align-items: center; /* Centre verticalement */
-    gap: 8px; /* Espace entre le logo et le texte */
+    align-items: center; 
+    gap: 8px; 
   }
   
   .logo {
-    font-weight: bold; /* Met le texte en gras */
-    color: white; /* Si nécessaire */
-    font-size: 18px; /* Ajuste la taille si besoin */
+    font-weight: bold; 
+    color: white; 
+    font-size: 18px;
   }
   
   /* CONTENU À DROITE */
@@ -44,25 +44,27 @@
     gap: 20px;
   }
   
-  /* MENU NAVIGATION */
+  /* MENU à droite pour liens internes */
   nav {
     display: flex;
     gap: 15px;
   }
   
+  /* style des liens pour naviguer en interne  */
   nav p {
     color: white;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer; /* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
   }
   
+  /*Style lien texte*/
   nav a {
-    text-decoration: none; /* Supprime le soulignement */
-    color: white; /* Garde le texte en blanc */
+    text-decoration: none;
+    color: white; 
     font-size: 16px;
     cursor: pointer;
   }
-  
+/*Style lien texte lors du survol */
   nav a:hover {
     text-decoration: underline; /* Ajoute le soulignement au survol */
   }
@@ -80,13 +82,13 @@
     font-weight: bold;
     cursor: pointer;
   }
-  
+  /* Icon coeur du bouton */
   .button img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
   }
-  
+  /* Effet sur le bouton lorsque le curseur survol */
   .button:hover {
     background-color: darkred;
   }
@@ -94,6 +96,7 @@
   
 
 /* SECTION FORMULAIRE */
+/* style global de la section */
 .section1 {
     text-align: center;
     padding: 40px 20px;
@@ -104,7 +107,7 @@
 .form-contact {
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* ombre de la box*/
     max-width: 650px;
     padding: 20px;
     margin: auto;
@@ -113,14 +116,14 @@
     align-items: center;
 }
 
-/* Groupes de champs */
+/* Tous les groupes de champs pour le formulaire*/
 .form-group {
     width: 100%;
     text-align: left;
     margin-bottom: 15px;
 }
 
-/* Labels */
+/* Labels >  représente une légende pour un objet d'une interface utilisateur*/ 
 .form-group label {
     font-weight: bold;
     display: block;
@@ -135,19 +138,8 @@
     border-radius: 8px;
     font-size: 16px;
     background-color: #f8f8f8;
-    transition: border 0.3s;
-}
-
-.form-input:focus {
-    border-color: #3498db;
-    outline: none;
-}
-
-/* Messages d'erreur */
-.error-message {
-    color: red;
-    font-size: 14px;
-    display: none;
+    transition: border 0.3s; 
+    /* permet de créer des effets de transition lorsque certaines propriétés CSS changent de valeur */
 }
 
 /* Bouton d'envoi */
@@ -166,12 +158,13 @@
     justify-content: center;
 }
 
+/* Image du bouton d'envoi */
 .envoi-button img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
 }
-
+/* effet du bouton d'envoi lorsque le curseur le survol */
 .envoi-button:hover {
     background-color: #025b2f;
 }
@@ -181,12 +174,12 @@
      .footer {
         background-color: #000;
         color: #fff;
-        padding: 40px; /* Augmentation de la marge */
+        padding: 40px; 
         display: flex;
         justify-content: space-between;
     }
     .footer-column {
-        flex: 1;
+        flex: 1; /* place au dessus */
         padding: 0 20px; /* Ajout de marge entre les colonnes */
     }
     .footer-column h3 {
@@ -198,7 +191,8 @@
         line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
     }
     .footer-column .contact-icon {
-        display: inline-block;
-        vertical-align: middle;
+        display: inline-block; /*Cette propriété combine les caractéristiques des éléments en ligne (inline) et des blocs (block)*/
+        vertical-align: middle; /* aligne le milieu de l'élément avec le milieu de la ligne de base de l'élément parent*/
+        /* utilisé pour aligner verticalement des éléments en ligne ou des éléments en ligne-bloqués par rapport à la ligne de base de l'élément parent ou du conteneur */
         margin-right: 10px;
     }
