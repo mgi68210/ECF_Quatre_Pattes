@@ -285,33 +285,29 @@ nav a:hover {
 .mission-text h2 {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 1px;
 }
 
 .mission-text p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 
 /* SECTION 4 */
+/* Conteneur principal de la section */
 .section4 {
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
-  
-}
-
-/* Titre */
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Conteneur de l'image principale */
@@ -319,23 +315,25 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .big-image-container {
   position: relative;
-  width: 1480px;
-  height: 500px; 
-  border-radius: 12px;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px; /* Arrondit légèrement les coins */
   overflow: hidden;
-  display: block;
+  margin: 10px; /* Ajoute une petite marge */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
 .big-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Centrer l'image et la recadrer */
-  border-radius: 12px;
-  object-position: center; /* Centrer l'image dans le conteneur */
+  object-fit: cover;
+  border-radius: 10px; /* Arrondi les coins de l'image aussi */
 }
 
 /* Overlay de texte */
@@ -344,53 +342,45 @@ h2 {
   bottom: 0;
   left: 0;
   width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: white;
   padding: 20px;
   text-align: left;
-  border-radius: 0 0 12px 12px;
-}
-
-.overlay h4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.overlay h5 {
-  font-size: 14px;
-  line-height: 1.4;
-  margin-top: 5px;
-}
-
-.overlay h6 {
-  font-size: 12px;
-  margin-top: 5px;
+  border-radius: 0 0 10px 10px; /* Arrondi seulement en bas */
 }
 
 /* Conteneur des miniatures */
 .thumbnail-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 10px; /* Ajoute un léger espace entre les miniatures */
   width: 100%;
-  margin-top: 20px; /* Ajout d'un petit espacement */
+  max-width: 100%;
+  margin-top: 10px;
 }
 
 /* Miniatures */
 .thumbnail {
   position: relative;
-  width: 100%;
-  height:200px;
-  border-radius: 12px;
+  width: calc(100% / 3 - 20px); /* Ajuste la largeur pour inclure les marges */
+  height: 140px;
+  border-radius: 10px; /* Arrondi légèrement les coins */
   overflow: hidden;
   cursor: pointer;
+  margin: 10px; /* Ajoute une petite marge sur les côtés */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s ease-in-out; /* Effet hover */
 }
 
 .thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Centrer l'image dans le conteneur */
-  border-radius: 12px;
+  object-fit: cover;
+  border-radius: 10px; /* Arrondi les coins de l'image */
+}
+
+.thumbnail:hover {
+  transform: scale(1.05); /* Légère animation au survol */
 }
 
 /* Texte centré dans les miniatures */
@@ -400,12 +390,11 @@ h2 {
   left: 50%;
   transform: translate(-50%, 50%);
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 8px;
   text-align: center;
 }
+
 
 
 /* SECTION 5 */
@@ -477,6 +466,7 @@ h2 {
   background-color: #d0d0d0;
 }
 
+/* SECTION 5 PARTIE 2 */
 
 /* Impact Section */
 .impact-section {
@@ -487,6 +477,7 @@ h2 {
   display: flex;
   flex-direction: column;  
   align-items: center;  
+
 }
 
 .impact-section h2 {
@@ -512,6 +503,7 @@ h2 {
 .impact-stats .impact-icon {
   width: 40px; /* Vous pouvez ajuster la taille de vos icônes */
   height: 40px;
+
   margin-bottom: 10px; /* Espacement entre l'icône et le texte */
 }
 
