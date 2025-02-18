@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire un Don</title>
+</head>
+<style>
+    /* Styles inchangés */
+    .section2 {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #fff;
+    }
+    .donation-box {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        max-height: 500px;
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .donation-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+    .donation-card {
+        flex: 1;
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+    .donation-card strong {
+        font-size: 18px;
+        display: block;
+    }
+
+    /* STYLE DEFINI POUR LE JS */
+    .donation-card.selected {
+        background-color: #e9fff0;
+        border: 2px solid #3cb371;
+    }
+    .donation-options {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .option {
+        padding: 8px 15px;
+        border: none;
+        background-color: #eee;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    /* STYLE DEFINI POUR LE JS */
+    .option.active {
+        background-color: #3cb371;
+        color: white;
+    }
+    .donate-button {
+        background-color: #d63031;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .donate-button img {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+    }
+    .donate-button:hover {
+        background-color: #c0392b;
+    }
+</style>
+<body>
+<section class="section2">
+    <h2>Faites un don</h2>
+    
+    <div class="donation-box">
+        <div class="donation-cards">
+            <div class="donation-card" id="carteDon1" onclick="selectDonation('carteDon1')">
+                <strong>10€</strong>
+                <p>permet de nourrir 5 animaux pendant une journée</p>
+            </div>
+            <div class="donation-card" id="carteDon2" onclick="selectDonation('carteDon2')">
+                <strong>20€</strong>
+                <p>permet d’héberger un animal sauvage pendant une nuit</p>
+            </div>
+            <div class="donation-card" id="carteDon3" onclick="selectDonation('carteDon3')">
+                <strong>50€</strong>
+                <p>permet de financer les soins vétérinaires complets pour un animal</p>
+            </div>
+        </div>
+
+        <div class="donation-options">
+            <button class="option" id="optionUneFois" onclick="selectOption('optionUneFois')">Une fois</button>
+            <button class="option" id="optionMensuel" onclick="selectOption('optionMensuel')">Mensuel</button>
+            <button class="option" id="optionAnnuel" onclick="selectOption('optionAnnuel')">Annuel</button>
+        </div>
+
+        <button class="donate-button" onclick="confirmDonation()">
+            <img src="./images/heart.PNG" alt="heart icon"> Faire un don
+        </button>
+    </div>
+</section>
+
+<script>
+    // Variables pour mémoriser les sélections
+    let idCarteSelectionnee = '';
+    let idOptionSelectionnee = '';
+
+    function selectDonation(idCarte) {
+        // Retire la sélection des autres cartes
+        if (idCarteSelectionnee) {
+            document.getElementById(idCarteSelectionnee).classList.remove('selected');
+        }
+        
+        // Ajoute la classe 'selected' à la carte sélectionnée
+        document.getElementById(idCarte).classList.add('selected');
+        idCarteSelectionnee = idCarte; // Mémorise l'ID de la carte sélectionnée
+    }
+
+    function selectOption(idOption) {
+        // Retire la sélection des autres options
+        if (idOptionSelectionnee) {
+            document.getElementById(idOptionSelectionnee).classList.remove('active');
+        }
+        
+        // Ajoute la classe 'active' à l'option sélectionnée
+        document.getElementById(idOption).classList.add('active');
+        idOptionSelectionnee = idOption; // Mémorise l'ID de l'option sélectionnée
+    }
+
+    function confirmDonation() {
+        // Vérifie si une carte et une option sont sélectionnées
+        if (idCarteSelectionnee && idOptionSelectionnee) {
+            const montant = document.getElementById(idCarteSelectionnee).querySelector('strong').innerText;
+            const frequence = document.getElementById(idOptionSelectionnee).innerText;
+            alert(`Vous avez sélectionné un montant de ${montant} pour ${frequence}.`);
+        } else {
+            alert("Veuillez sélectionner un montant et une option.");
+        }
+    }
+</script>
+</body>
+</html>
