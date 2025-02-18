@@ -92,7 +92,88 @@
   
   
 
+/* SECTION FORMULAIRE */
+.section1 {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
 
+/* Conteneur du formulaire */
+.form-contact {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Groupes de champs */
+.form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Champs de formulaire */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    transition: border 0.3s;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Messages d'erreur */
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+
+/* Bouton d'envoi */
+.envoi-button {
+    background-color: #027c41;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.envoi-button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.envoi-button:hover {
+    background-color: #025b2f;
+}
 
      /* FOOTER*/
 
