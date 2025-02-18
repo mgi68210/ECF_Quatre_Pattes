@@ -311,6 +311,7 @@ nav a:hover {
 
 /* SECTION 4 */
 
+/* SECTION 4 */
 .section4 {
   text-align: center;
   padding: 0;
@@ -334,7 +335,6 @@ nav a:hover {
 }
 
 /* Conteneur qui possède les éléments principaux avec l'image*/
-
 .big-image-container {
   position: relative;
   width: 100%;
@@ -395,8 +395,6 @@ nav a:hover {
   border-radius: 10px; 
 }
 
-
-
 /* Texte centré dans les miniatures */
 .thumbnail p {
   position: absolute;
@@ -408,7 +406,6 @@ nav a:hover {
   font-weight: bold;
   text-align: center;
 }
-
 
 /* SECTION 5 */
 .section5 {
@@ -705,19 +702,19 @@ h2 {
     .donation-cards {
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 15px; /* espace*/
   }
 
   /* Ajuste chaque carte pour éviter le débordement */
   .donation-card {
-      width: 90%; /* Prend 90% de la largeur de l'écran */
-      max-width: 300px; /* Évite qu'elles soient trop larges */
+      width: 90%; /* Ca représente 90% de la largeur de l'écran */
+      max-width: 300px; /* Évite que ça soit trop grand */
   }
 
   /* Ajuste le conteneur principal pour éviter qu'il déborde */
   .donation-box {
       width: 95%;
-      max-width: 500px; /* Garde une limite raisonnable */
+      max-width: 500px; /* Une limite adaptée */
       padding: 20px;
   }
 
@@ -730,9 +727,52 @@ h2 {
   /* Ajuste le bouton principal */
   .donate-button {
       width: 100%;
-      font-size: 14px; /* Réduit légèrement la taille du texte */
+      font-size: 14px; /* Pour réduire un peu la taille du texte*/
       padding: 10px;
   }
+
+  /* SECTION 3*/
+/* Conteneur en flex avec une direction en colonne */
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Pour que l'image et la zone texte aient les mêmes dimensions*/
+.mission-image,
+.mission-text {
+  width: 100%;
+  height: 50vh; /* 50% de la hauteur de l'écran */
+}
+
+/* Ajustement de l'image à son container */
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Ajustement du texte */
+.mission-text {
+  padding: 13px;
+  text-align: left;
+  height: 50vh; /* Assurer que la hauteur est la même que celle de l'image */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Suppression des marges entre les paragraphes pour pouvoir le rendre visible */
+.mission-text p {
+  font-size: 11px; 
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* SECTION 4 */
+
 
   /* FOOTER */
             /* Footer Aligner à gauche de la page*/
