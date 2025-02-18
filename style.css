@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
   font-family: Arial, Helvetica, sans-serif;
   
 }
@@ -311,7 +312,6 @@ nav a:hover {
 
 /* SECTION 4 */
 
-/* SECTION 4 */
 .section4 {
   text-align: center;
   padding: 0;
@@ -406,7 +406,6 @@ nav a:hover {
   font-weight: bold;
   text-align: center;
 }
-
 /* SECTION 5 */
 .section5 {
   background-color: #eafaf1;
@@ -773,6 +772,97 @@ h2 {
 
 /* SECTION 4 */
 
+.big-container {
+  flex-direction: column; /* Change la direction en colonne sur mobile */
+  align-items: center;
+}
+
+.big-image-container {
+  width: 100%; /* L'image occupe toute la largeur */
+  height: 300px; /* Ajuste la hauteur de l'image pour le mobile */
+}
+
+.thumbnail-container {
+  flex-direction: row; /* Maintient les miniatures en ligne */
+  gap: 15px; /* Ajoute un peu d'espace entre les miniatures */
+  margin-top: 20px; /* Marge au-dessus des miniatures */
+}
+
+/* Ajuste la taille des miniatures */
+.thumbnail {
+  width: calc(100% / 3 - 20px); /* Garde une largeur égale pour les miniatures */
+  height: 140px; /* Taille des miniatures */
+}
+
+/* Ajuste la taille du texte */
+.thumbnail p {
+  font-size: 14px; /* Réduit la taille du texte pour le mobile */
+}
+
+/* Ajuste la taille du texte dans le overlay */
+.overlay h4 {
+  font-size: 20px;
+}
+
+.overlay h5 {
+  font-size: 16px;
+}
+
+.overlay h6 {
+  font-size: 14px;
+}
+
+  /* SECTION 5 - Quiz */
+  .quiz-section {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .question p {
+      font-size: 14px;
+      text-align: center;
+  }
+
+  .options {
+      display: flex;
+      flex-direction: column; /* Empile les boutons */
+      gap: 10px;
+      align-items: center;
+  }
+
+  .options button {
+      width: 90%;
+      font-size: 14px;
+      padding: 8px;
+      max-width: 300px;
+  }
+
+  /* SECTION 5 - Impact */
+  .impact-section {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .impact-stats {
+      flex-direction: column; /* Affichage en colonne */
+      align-items: center;
+      gap: 20px; /* Espacement entre les éléments */
+  }
+
+  .impact-stats div {
+      width: 90%; /* Chaque élément prend toute la largeur */
+      min-width: auto;
+      text-align: center;
+  }
+
+  .impact-icon {
+      width: 35px;
+      height: 35px;
+  }
+
+  .impact-stats div p {
+      font-size: 14px;
+  }
 
   /* FOOTER */
             /* Footer Aligner à gauche de la page*/
