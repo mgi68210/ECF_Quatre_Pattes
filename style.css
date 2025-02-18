@@ -1,0 +1,591 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #057858;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* LOGO */
+.logo-header img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center; /* Centre verticalement */
+  gap: 8px; /* Espace entre le logo et le texte */
+}
+
+.logo {
+  font-weight: bold; /* Met le texte en gras */
+  color: white; /* Si nécessaire */
+  font-size: 18px; /* Ajuste la taille si besoin */
+}
+
+/* CONTENU À DROITE */
+.right-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* MENU NAVIGATION */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav p {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav p:hover {
+  text-decoration: underline;
+}
+
+/* BOUTON DON */
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #DB2727;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.button:hover {
+  background-color: darkred;
+}
+
+
+/* Section 1 */
+
+.section1 {
+  background-image: url(./images/Image\ haut\ de\ page.png);
+  background-size: cover;
+  background-position: center;
+  height: 400px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out; 
+}
+
+.section1:hover {
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6); /* Ombre intérieure au survol */
+}
+
+
+.h1s1 {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.p1s1 {
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* SECTION 2 */
+.section2 {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+/* Conteneur principal */
+.donation-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cartes de dons */
+.donation-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.donation-card {
+  flex: 1;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: all 0.3s;
+}
+
+.donation-card strong {
+  font-size: 18px;
+  display: block;
+}
+
+.donation-card.selected {
+  background-color: #e9fff0;
+  border: 2px solid #3cb371;
+}
+
+/* Options de dons */
+.donation-options {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.option {
+  padding: 8px 15px;
+  border: none;
+  background-color: #eee;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option.active {
+  background-color: #3cb371;
+  color: white;
+}
+
+/* Bouton principal */
+.donate-button {
+  background-color: #d63031;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Réduction de l’icône */
+.donate-button img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.donate-button:hover {
+  background-color: #c0392b;
+}
+
+
+/* SECTION 3 */
+.section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #eafaf1;
+}
+
+/* Conteneur avec Grid */
+.mission-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  max-width: 900px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image à gauche */
+.mission-image {
+  display: flex;
+}
+
+.mission-image img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Texte à droite */
+.mission-text {
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.mission-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+
+/* SECTION 4 */
+.section4 {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+/* Titre */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Conteneur de l'image principale */
+.big-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px; /* Gardez cette limitation pour la taille de l'image principale */
+}
+
+.big-image-container {
+  position: relative;
+  width: 800px;
+  height: 400px; 
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+.big-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Centrer l'image et la recadrer */
+  border-radius: 12px;
+  object-position: center; /* Centrer l'image dans le conteneur */
+}
+
+/* Overlay de texte */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  border-radius: 0 0 12px 12px;
+}
+
+.overlay h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.overlay h5 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 5px;
+}
+
+.overlay h6 {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Conteneur des miniatures */
+.thumbnail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px; /* Ajout d'un petit espacement */
+}
+
+/* Miniatures */
+.thumbnail {
+  position: relative;
+  width: 265px;
+  height: 100px; 
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Centrer l'image dans le conteneur */
+  border-radius: 12px;
+}
+
+/* Texte centré dans les miniatures */
+.thumbnail p {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+/* SECTION 5 */
+.section5 {
+  background-color: #eafaf1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centre le contenu horizontalement */
+  justify-content: flex-start;  /* Garde tout en haut de la page */
+  height: 100vh;  /* Prendre toute la hauteur de la fenêtre */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Titre principal */
+h2 {
+  color: rgb(0, 0, 0);  /* Titre en blanc */
+  font-size: 28px;
+  margin-bottom: 20px;  /* Un peu d'espacement sous le titre */
+}
+
+/* Quizz Section */
+.quiz-section {
+  width: 100%;
+  max-width: 800px;  
+  margin: 10px 0; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+/* Style des questions */
+.question {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: left;  
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 10px;  
+}
+
+/* Options (réponses) */
+.options {
+  display: flex;
+  flex-direction: row;  /* Met les boutons côte à côte */
+  justify-content: space-between;  /* Espace les boutons de manière égale */
+  gap: 10px;  /* Espacement entre les boutons */
+}
+
+.options button {
+  text-align: left;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;  
+}
+
+.options button:hover {
+  background-color: #d0d0d0;
+}
+
+
+/* Impact Section */
+.impact-section {
+  width: 100%;
+  max-width: 900px;  
+  /* margin: 20px 0; 
+  padding: 20px; */
+  display: flex;
+  flex-direction: column;  
+  align-items: center;  
+}
+
+.impact-section h2 {
+  color: #333333;
+  margin-bottom: 20px;  
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.impact-stats div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le texte et l'icône */
+}
+
+.impact-stats .impact-icon {
+  width: 40px; /* Vous pouvez ajuster la taille de vos icônes */
+  height: 40px;
+  margin-bottom: 10px; /* Espacement entre l'icône et le texte */
+}
+
+
+
+.impact-stats div p {
+  margin: 5px;
+}
+
+.bold-text {
+  font-weight: bold; 
+}
+
+
+/* SECTION 6 */
+.container6 {
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 40px 0; /* Espacement autour de la section */
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  /* Supprimer la hauteur fixe, cela permet à la boîte de s'ajuster à son contenu */
+  height: auto;
+}
+
+.testimonial img {
+  width: 100%;
+  height: 200px; /* Fixer la hauteur de l'image */
+  object-fit: cover; /* Garder les proportions de l'image */
+}
+
+.testimonial-text {
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  text-align: left;  /* Aligner le texte à gauche */
+  margin: 0;  /* Enlever toute marge par défaut */
+  flex-grow: 1;  /* Permet au texte de prendre l'espace restant */
+}
+
+.testimonial-author {
+  padding: 0 15px 15px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold; /* Mettre le texte en gras */
+  text-align: left;  /* Aligner le texte à gauche */
+  margin-top: 10px;  /* Espacement entre le texte et le nom de l'auteur */
+  margin-bottom: 0; /* Pas de marge en bas */
+}
+
+.testimonial-text,
+.testimonial-author {
+  margin: 0; /* Supprimer toute marge par défaut */
+}
+
+
+
+    /* FOOTER*/
+
+       .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px; /* Augmentation de la marge */
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-column {
+            flex: 1;
+            padding: 0 20px; /* Ajout de marge entre les colonnes */
+        }
+        .footer-column h3 {
+            margin-top: 0;
+        }
+        .footer-column p, .footer-column a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
+        }
+        .footer-column .contact-icon {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
