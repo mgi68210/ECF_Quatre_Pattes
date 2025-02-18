@@ -683,23 +683,58 @@ h2 {
 
 /* SECTION 1 */
 .section1 {
-  background-size: cover; /* Ajuste l'image pour qu'elle remplisse la section sans marges */
-  background-position: center; /* Centre l'image */
-  height: auto; /* Ajuste la hauteur selon le contenu */
+  background-size: cover; /* L'image remplit bien son espace */
+  background-position: center; /* L'image est bien centrée */
+  height: auto; /* Ajuste la hauteur */
   min-height: 400px; /* Définit une hauteur minimale */
-  padding: 20px; /* Ajoute un padding pour éviter que le texte touche les bords */
+  padding: 20px; /*Pour ne pas que le texte touche les bords */
 }
 
 .h1s1 {
-  font-size: 28px; /* Réduit la taille du titre pour mobile */
+  font-size: 28px; /* Réduction de la taille titre */
 }
 
 .p1s1 {
-  font-size: 16px; /* Réduit la taille du texte pour mobile */
+  font-size: 16px; /* Réduit la taille texte mobile */
 }
 
 
+/* SECTION 2 */
 
+    /* Met les cartes de dons en colonne */
+    .donation-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  /* Ajuste chaque carte pour éviter le débordement */
+  .donation-card {
+      width: 90%; /* Prend 90% de la largeur de l'écran */
+      max-width: 300px; /* Évite qu'elles soient trop larges */
+  }
+
+  /* Ajuste le conteneur principal pour éviter qu'il déborde */
+  .donation-box {
+      width: 95%;
+      max-width: 500px; /* Garde une limite raisonnable */
+      padding: 20px;
+  }
+
+  /* Assure que les options de don restent bien affichées */
+  .donation-options {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  /* Ajuste le bouton principal */
+  .donate-button {
+      width: 100%;
+      font-size: 14px; /* Réduit légèrement la taille du texte */
+      padding: 10px;
+  }
+
+  /* FOOTER */
             /* Footer Aligner à gauche de la page*/
             .footer {
               display: flex;
