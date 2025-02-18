@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: #057858;
+  }
+  
+  /* HEADER */
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  /* LOGO */
+  .logo-header img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-header {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    gap: 8px; /* Espace entre le logo et le texte */
+  }
+  
+  .logo {
+    font-weight: bold; /* Met le texte en gras */
+    color: white; /* Si nécessaire */
+    font-size: 18px; /* Ajuste la taille si besoin */
+  }
+  
+  /* CONTENU À DROITE */
+  .right-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* MENU NAVIGATION */
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav p {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  nav a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Garde le texte en blanc */
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  nav a:hover {
+    text-decoration: underline; /* Ajoute le soulignement au survol */
+  }
+  
+  /* BOUTON DON */
+  .button {
+    display: flex;
+    align-items: center;
+    background-color: #DB2727;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .button img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .button:hover {
+    background-color: darkred;
+  }
+  
+  
