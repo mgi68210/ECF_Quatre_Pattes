@@ -26,47 +26,43 @@ body {
 
 .logo-header {
   display: flex;
-  align-items: center; /* Centre verticalement */
-  gap: 8px; /* Espace entre le logo et le texte */
+  align-items: center; 
+  gap: 8px; 
 }
 
 .logo {
-  font-weight: bold; /* Met le texte en gras */
-  color: white; /* Si nécessaire */
-  font-size: 18px; /* Ajuste la taille si besoin */
+  font-weight: bold; 
+  color: white; 
+  font-size: 18px; 
 }
 
-/* CONTENU À DROITE */
+/* CONTENU À DROITE DU HEADER*/
 .right-container {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* MENU NAVIGATION */
+/* MENU NAVIGATION DES PAGES INTERNES*/
 nav {
   display: flex;
   gap: 15px;
 }
 
-nav p {
-  color: white;
+nav a {
+  text-decoration: none; 
+  color: white; 
   font-size: 16px;
   cursor: pointer;
 }
 
-nav a {
-  text-decoration: none; /* Supprime le soulignement */
-  color: white; /* Garde le texte en blanc */
-  font-size: 16px;
-  cursor: pointer;
-}
+/* Décoration des liens lorsque le curseur le survol */
 
 nav a:hover {
-  text-decoration: underline; /* Ajoute le soulignement au survol */
+  text-decoration: underline; 
 }
 
-/* BOUTON DON */
+/* BOUTON DON A DROITE DU HEADER */
 .button {
   display: flex;
   align-items: center;
@@ -80,18 +76,23 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* ICON COEUR */
+
 .button img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
 }
 
+/* Décoration du bouton (change de couleur lors du survol du curseur */
+
 .button:hover {
   background-color: darkred;
 }
 
 
-/* Section 1 */
+
+/* SECTION 1*/
 
 
 .section1 {
@@ -100,7 +101,7 @@ nav a:hover {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px; 
+  height: 550px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +123,8 @@ nav a:hover {
 
 .h1s1, .p1s1 {
   position: relative; /* Pour que le texte soit au-dessus du filtre */
-  z-index: 1;
+  z-index: 1; 
+  /* spécifie l'ordre de l'élément, h1 et p1 se trouve au dessus grâce à ça */
 }
 
 
@@ -141,6 +143,8 @@ nav a:hover {
 
 
 /* SECTION 2 */
+
+
 .section2 {
   text-align: center;
   padding: 40px 20px;
@@ -169,43 +173,49 @@ nav a:hover {
   width: 100%;
 }
 
+/* Box choix don */
 .donation-card {
-  flex: 1;
+  flex: 1;   /* spécifie l'ordre de l'élément, donation-card se trouve au dessus grâce à ça */
   padding: 15px;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   border-radius: 10px;
   text-align: center;
   border: 1px solid #ddd;
-  transition: all 0.3s;
+  cursor: pointer;
+
 }
 
+/* Texte en gras */
 .donation-card strong {
   font-size: 18px;
   display: block;
 }
-
+/* Choix du don par défaut */
 .donation-card.selected {
   background-color: #e9fff0;
   border: 2px solid #3cb371;
 }
 
-/* Options de dons */
+
+/* Options de dons dans un container */
 .donation-options {
   margin: 20px 0;
   display: flex;
   justify-content: center;
   gap: 10px;
-}
 
+}
+/* boutons/choix en terme de fréquence */
 .option {
   padding: 8px 15px;
   border: none;
   background-color: #eee;
   border-radius: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  cursor: pointer; 
+  /* Montre à l'utilisateur qu'il peut cliquer */
 }
 
+/* Bouton fréquence choisi par défaut */
 .option.active {
   background-color: #3cb371;
   color: white;
@@ -222,7 +232,6 @@ nav a:hover {
   cursor: pointer;
   width: 100%;
   margin-top: 10px;
-  transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,6 +244,7 @@ nav a:hover {
   margin-right: 8px;
 }
 
+/* Change de couleur lors du survol */
 .donate-button:hover {
   background-color: #c0392b;
 }
@@ -256,7 +266,7 @@ nav a:hover {
   max-width: 10000px;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /*ombre*/
   overflow: hidden;
 }
 
@@ -270,7 +280,7 @@ nav a:hover {
   height: auto; 
   object-fit: cover;
   display: block;
-  border-radius: 12px 0 0 12px;
+  border-radius: 12px 0 0 12px; /*Cible les coins à mettre un bord*/
 }
 
 /* Texte à droite */
@@ -282,12 +292,14 @@ nav a:hover {
   justify-content: center;
 }
 
+/* Titre texte à droite  */
 .mission-text h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 1px;
 }
 
+/* Paragraphe du texte à droite */
 .mission-text p {
   font-size: 18px;
   line-height: 1.6;
@@ -296,7 +308,7 @@ nav a:hover {
 
 
 /* SECTION 4 */
-/* Conteneur principal de la section */
+
 .section4 {
   text-align: center;
   padding: 0;
@@ -310,7 +322,7 @@ nav a:hover {
   overflow: hidden;
 }
 
-/* Conteneur de l'image principale */
+/* Conteneur qui possède l'image principale */
 .big-container {
   display: flex;
   flex-direction: row;
@@ -318,6 +330,8 @@ nav a:hover {
   width: 100%;
   max-width: 100%;
 }
+
+/* Conteneur qui possède les éléments principaux avec l'image*/
 
 .big-image-container {
   position: relative;
@@ -329,6 +343,7 @@ nav a:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
+/* Conteneur de l'image */
 .big-image-container img {
   width: 100%;
   height: 100%;
@@ -336,52 +351,49 @@ nav a:hover {
   border-radius: 10px; /* Arrondi les coins de l'image aussi */
 }
 
-/* Overlay de texte */
+/* Overlay du texte */
 .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: white;
   padding: 20px;
   text-align: left;
   border-radius: 0 0 10px 10px; /* Arrondi seulement en bas */
 }
 
-/* Conteneur des miniatures */
+/* Conteneur des images miniatures */
 .thumbnail-container {
   display: flex;
   justify-content: space-between;
-  gap: 10px; /* Ajoute un léger espace entre les miniatures */
+  gap: 10px; 
   width: 100%;
   max-width: 100%;
   margin-top: 10px;
 }
 
-/* Miniatures */
+/* container qui possède des éléments avec images miniatures */
 .thumbnail {
   position: relative;
   width: calc(100% / 3 - 20px); /* Ajuste la largeur pour inclure les marges */
   height: 140px;
-  border-radius: 10px; /* Arrondi légèrement les coins */
+  border-radius: 10px; 
   overflow: hidden;
   cursor: pointer;
-  margin: 10px; /* Ajoute une petite marge sur les côtés */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  transition: transform 0.3s ease-in-out; /* Effet hover */
+  margin: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ombre légère */
 }
 
+/* images miniatures  */
 .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px; /* Arrondi les coins de l'image */
+  border-radius: 10px; 
 }
 
-.thumbnail:hover {
-  transform: scale(1.05); /* Légère animation au survol */
-}
+
 
 /* Texte centré dans les miniatures */
 .thumbnail p {
@@ -396,7 +408,6 @@ nav a:hover {
 }
 
 
-
 /* SECTION 5 */
 .section5 {
   background-color: #eafaf1;
@@ -404,21 +415,20 @@ nav a:hover {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Centre le contenu horizontalement */
-  justify-content: flex-start;  /* Garde tout en haut de la page */
-  height: 100vh;  /* Prendre toute la hauteur de la fenêtre */
+  align-items: center;  
+  justify-content: flex-start;  /* les élements sont en haut */
+  height: 100vh;  /* prend toute la position de la fenêtre */
   text-align: center;
   padding: 20px;
 }
 
-/* Titre principal */
+/* Titre principal de la section */
 h2 {
-  color: rgb(0, 0, 0);  /* Titre en blanc */
   font-size: 28px;
-  margin-bottom: 20px;  /* Un peu d'espacement sous le titre */
+  margin-bottom: 10px; /*espace sous le titre*/
 }
 
-/* Quizz Section */
+/* Section Quizz */
 .quiz-section {
   width: 100%;
   max-width: 800px;  
@@ -436,10 +446,11 @@ h2 {
   margin-bottom: 20px;
   background-color: #f8f8f8;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* ombre légère */
   text-align: left;  
 }
 
+/* Style pour les paragraphes */
 .question p {
   font-weight: bold;
   margin-bottom: 10px;  
@@ -448,20 +459,22 @@ h2 {
 /* Options (réponses) */
 .options {
   display: flex;
-  flex-direction: row;  /* Met les boutons côte à côte */
-  justify-content: space-between;  /* Espace les boutons de manière égale */
-  gap: 10px;  /* Espacement entre les boutons */
+  flex-direction: row;  
+  justify-content: space-between;  /* éspace les boutons de manière égale */
+  gap: 10px;  
 }
 
+/* Options (réponses) bouton */
 .options button {
   text-align: left;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  flex: 1;  
+  cursor: pointer; /* indique à l'utilisateur qu'il peut cliquer */ 
+  flex: 1;  /* dispose l'élément au dessus */
 }
 
+/* Options (réponses) bouton (effet au survol) */
 .options button:hover {
   background-color: #d0d0d0;
 }
@@ -470,21 +483,21 @@ h2 {
 
 /* Impact Section */
 .impact-section {
-  width: 100%;
-  max-width: 900px;  
-  /* margin: 20px 0; 
-  padding: 20px; */
+  width: 110vw;
+  max-width: 100%;
+  margin: 20px 0; 
+  padding: 20px;
   display: flex;
   flex-direction: column;  
   align-items: center;  
 
 }
-
+/* style titre de section impact */
 .impact-section h2 {
   color: #333333;
   margin-bottom: 20px;  
 }
-
+/* container impact */
 .impact-stats {
   display: flex;
   justify-content: space-around;
@@ -493,65 +506,75 @@ h2 {
   margin-top: 50px;
 }
 
+/* elements dans le container impact-stats */
 .impact-stats div {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre le texte et l'icône */
+  align-items: center; 
 }
 
+/* elements + icons dans le container impact-stats */
 .impact-stats .impact-icon {
-  width: 40px; /* Vous pouvez ajuster la taille de vos icônes */
+  width: 40px; 
   height: 40px;
-
-  margin-bottom: 10px; /* Espacement entre l'icône et le texte */
-}
-
+  margin-bottom: 10px; 
+}  
 
 
+/* les éléments textes p  */
 .impact-stats div p {
   margin: 5px;
 }
 
+/* les éléments textes bold */
 .bold-text {
   font-weight: bold; 
 }
 
 
 /* SECTION 6 */
+/* Container principal */
 .container6 {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
   text-align: center;
   background-color: #f8f8f8;
-  padding: 40px 20px; /* Ajouter une petite marge autour de la section */
+  padding: 40px 20px;
 }
 
+/* Container des trois box testimonial */
 .testimonials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;  /* Espacement entre les boxs, tu peux ajuster à 5px si nécessaire */
-  width: 100%;  /* La section prend toute la largeur */
-  justify-content: center;  /* Centrer les boxs */
+  flex-direction: row; /* Aligner les témoignages horizontalement */
+  justify-content: space-evenly; /* Espacement égal entre les témoignages */
+  gap: 20px; /* Espace entre les témoignages */
+  width: 100%;
+  flex-wrap: wrap; /* Permet aux box de se replier si l'écran est trop petit */
 }
 
+/* box testimonial */
 .testimonial {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 100%;  /* Les boxs prennent toute la largeur de leur parent */
-  max-width: 300px;  /* Limiter la largeur maximale à 300px */
+  flex: 1 1 30%; /* Chaque box prend environ 30% de la largeur de l'écran */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Disposer l'image et le texte en colonne */
   height: auto;
-  flex-grow: 1;  /* Permet à la box de grandir pour occuper l'espace restant */
-  box-sizing: border-box;  /* Inclure les paddings dans la largeur */
+  min-width: 280px; /* Minimum de largeur pour éviter que la box ne soit trop petite */
 }
+
+/* Image dans le testimonial */
 .testimonial img {
   width: 100%;
   height: 200px; /* Fixer la hauteur de l'image */
   object-fit: cover; /* Garder les proportions de l'image */
 }
 
+/* Texte du témoignage */
 .testimonial-text {
   padding: 15px;
   font-size: 14px;
@@ -561,6 +584,7 @@ h2 {
   flex-grow: 1;  /* Permet au texte de prendre l'espace restant */
 }
 
+/* Auteur du témoignage */
 .testimonial-author {
   padding: 0 15px 15px;
   font-size: 16px;
@@ -575,7 +599,6 @@ h2 {
 .testimonial-author {
   margin: 0; /* Supprimer toute marge par défaut */
 }
-
 
 
     /* FOOTER*/
