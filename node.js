@@ -1,4 +1,19 @@
-    // Variables pour mémoriser les sélections
+//    Faire un don header
+let compteur = 0; 
+   function incrementer(){
+    compteur++;
+    document.getElementById("display").innerHTML = compteur;
+    document.getElementById("display").style.color = " #DB2727"; 
+    document.getElementById("display").style.fontWeight="bold"; 
+    document.getElementById("display").style.fontSize="20px";  
+    document.getElementById("display").style.backgroundColor="white";
+    document.getElementById("display").style.borderRadius="30%";
+
+
+}
+
+// section 2 Don
+   // Variables pour mémoriser les sélections
     let idCarteSelectionnee = '';
     let idOptionSelectionnee = '';
 
@@ -29,7 +44,7 @@
         if (idCarteSelectionnee && idOptionSelectionnee) {
             const montant = document.getElementById(idCarteSelectionnee).querySelector('strong').innerText;
             const frequence = document.getElementById(idOptionSelectionnee).innerText;
-            alert(`Vous avez sélectionné un montant de ${montant} pour ${frequence}.`);
+            alert(`Vous avez sélectionné un montant de ${montant} pour une fréquence de ${frequence}.`);
         } else {
             alert("Veuillez sélectionner un montant et une option.");
         }
