@@ -718,7 +718,7 @@ h2 {
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   align-items: center; /* Centre verticalement le contenu */
   justify-content: flex-start; /* Aligne le texte et l'image à gauche */
-  background-color: #ff6b6b; 
+  background-color: #DB2727;
   color: white;
   cursor: pointer; /*indique à l'utilisateur que c'est cliquable*/
 }
@@ -884,8 +884,9 @@ h2 {
 }
 
 .question p {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
+  font-style: bold;
 }
 
 .options {
@@ -945,12 +946,34 @@ h2 {
 
 /* FOOTER */
 /* Footer Aligner à gauche de la page*/
-  .footer {
-    display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
-    flex-direction: column;
-    gap: 10px; /* Espacement entre les liens */
-    align-items: flex-start;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+/* Footer container */
+.footer {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; /* Espacement entre les éléments */
+  align-items: flex-start; /* Aligne tous les enfants à gauche */
 }
+
+/* Chaque colonne dans le footer */
+.footer-column {
+  display: flex; /* Met les éléments en ligne (icône + texte) */
+  flex-direction: column; 
+  align-items: left; 
+  gap: 8px; /* Espacement entre l'icône et le texte */
+}
+
+/* Icône de contact */
+.footer-column .contact-icon {
+  margin-right: 5px; /* Un peu de marge entre l'icône et le texte */
+}
+
+/* Le texte ou le lien à droite de l'icône */
+.footer-column p, .footer-column a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.8;
+}
+
 }
       
       
