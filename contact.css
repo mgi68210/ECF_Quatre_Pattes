@@ -62,7 +62,7 @@
     text-decoration: none;
     color: white; 
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;/* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
   }
   
   /*Style lien texte lors du survol */
@@ -81,7 +81,7 @@
     padding: 8px 15px; /* Ajuste le padding pour qu'il soit cohérent avec les éléments du nav */
     font-size: 14px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer;/* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
   }
   
   /* Icon coeur du bouton */
@@ -112,11 +112,11 @@
     border-radius: 12px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* ombre de la box*/
     max-width: 650px;
-    padding: 20px;
+    padding: 20px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
     margin: auto;
-    display: flex;
+    display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
     flex-direction: column;
-    align-items: center;
+    align-items: center;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
 }
 
 /* Tous les groupes de champs pour le formulaire*/
@@ -129,14 +129,14 @@
 /* Labels >  représente une légende pour un objet d'une interface utilisateur*/ 
 .form-group label {
     font-weight: bold;
-    display: block;
+    display: block;/*Prend toute la largeur disponible, commence sur une nouvelle ligne.*/
     margin-bottom: 5px;
 }
 
 /* Champs de formulaire */
 .form-input {
     width: 100%;
-    padding: 12px;
+    padding: 12px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
@@ -150,15 +150,15 @@
     background-color: #027c41;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px 20px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
     font-size: 16px;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: pointer;/* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
     width: 100%;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background-color 0.3s; /* backround color est la propriété à changé et 0,3 est la durée de l'animation*/
+    display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+    align-items: center;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+    justify-content: center;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
 }
 
 /* Image du bouton d'envoi */
@@ -198,7 +198,7 @@
   }
     .footer-column .contact-icon {
     display: inline-block;/*Combine les avantages des éléments block (taille personnalisable) avec le flux inline*/
-    vertical-align: middle;
+    vertical-align: middle;/*sert à aligner verticalement un élément par rapport à son élément parent*/
     margin-right: 5%;
   }
   
@@ -207,7 +207,7 @@
 
 
 @media screen and (max-width: 768px) {
-    /* Pour situé tout l'en tête en colonne à gauche */
+/* Pour situé tout l'en tête en colonne à gauche */
   .header {
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   flex-direction: column;
@@ -250,18 +250,18 @@
   width: 100%;
 }
   
-      /* SECTION 1 */
-      /* Formulaire de contact: ajuste la largeur sans changer la disposition */
-      .contact-form {
-          width: 100%;
-          max-width: 500px; 
-          margin: 0 auto; /* Permet de centrer le formulaire */
-      }
+/* SECTION 1 */
+/* Formulaire de contact: ajuste la largeur sans changer la disposition */
+    .contact-form {
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; /* Permet de centrer le formulaire */
+}
   
 /* FOOTER */
 
 .footer {
-    display: flex;
+    display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
     flex-direction: column; 
     gap: 10px; /* Espacement entre les éléments */
     align-items: flex-start; /* Aligne tous les enfants à gauche */
@@ -271,7 +271,7 @@
   .footer-column {
     display: flex; /* Met les éléments en ligne (icône + texte) */
     flex-direction: column; 
-    align-items: left; 
+    align-items: left; /*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
     gap: 8px; /* Espacement entre l'icône et le texte */
   }
   
