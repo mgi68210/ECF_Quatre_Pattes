@@ -37,29 +37,29 @@
 <section class="section2">
     <h2>Faites un don</h2>
     
-    <div class="donation-box">
-        <div class="donation-cards">
-            <div class="donation-card" id="carteDon1" onclick="selectDonation('carteDon1')">
+    <div class="don-box">
+        <div class="don-cards">
+            <div class="don-card" id="carteDon1" onclick="selectDon('carteDon1')">
                 <strong>10€</strong>
                 <p>permet de nourrir 5 animaux pendant une journée</p>
             </div>
-            <div class="donation-card" id="carteDon2" onclick="selectDonation('carteDon2')">
+            <div class="don-card" id="carteDon2" onclick="selectDon('carteDon2')">
                 <strong>20€</strong>
                 <p>permet d’héberger un animal sauvage pendant une nuit</p>
             </div>
-            <div class="donation-card" id="carteDon3" onclick="selectDonation('carteDon3')">
+            <div class="don-card" id="carteDon3" onclick="selectDon('carteDon3')">
                 <strong>50€</strong>
                 <p>permet de financer les soins vétérinaires complets pour un animal</p>
             </div>
         </div>
 
-        <div class="donation-options">
+        <div class="don-options">
             <button class="option" id="optionUneFois" onclick="selectOption('optionUneFois')">Une fois</button>
             <button class="option" id="optionMensuel" onclick="selectOption('optionMensuel')">Mensuel</button>
             <button class="option" id="optionAnnuel" onclick="selectOption('optionAnnuel')">Annuel</button>
         </div>
 
-        <button class="donate-button" onclick="confirmDonation()">
+        <button class="don-button" onclick="confirmDon()">
             <img src="./images/heart.PNG" alt="heart icon"> Faire un don
         </button>
     </div>
@@ -94,6 +94,7 @@
 </section>
 
 <!-- SECTION 4 -->
+
 <section class="section4">
     <br><h2>Histoires de Réussite</h2><br>
     <div class="big-container">
@@ -111,15 +112,15 @@
     </div>
     <!-- CODE AJUSTE POUR LE JAVASCRIPT -->
     <div class="mini-container">
-        <div class="mini" onclick="ok(this)">
+        <div class="mini" id="luna">
             <img src="./images/Luna.png" alt="Miniature 1">
             <p>Luna</p>
         </div>
-        <div class="mini" onclick="ok(this)">
+        <div class="mini" id="oscar">
             <img src="./images/Oscar.png" alt="Miniature 2">
             <p>Oscar</p>
         </div>
-        <div class="mini" onclick="ok(this)">
+        <div class="mini" id="max">
             <img src="./images/Max.png" alt="Miniature 3">
             <p>Max</p>
         </div>
@@ -127,35 +128,40 @@
 </section>
 
 
-<!-- SECTION 5 -->
- <!-- CODE AJUSTE POUR LE JAVASCRIPT -->
-<section class="section5">
 
+<section class="section5">
     <h2>Testez Vos Connaissances</h2>
   
     <div class="quiz-section">
-      <div class="question">
-        <p>Les associations gardent la majorité des dons pour leur fonctionnement</p>
-        <div class="options">
-          <button onclick="checkAnswer(this, true)">Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</button>
-          <button onclick="checkAnswer(this, false)">Faux</button>
+        <!-- Première Question -->
+        <div class="question">
+            <p>Les associations gardent la majorité des dons pour leur fonctionnement</p>
+            <div class="options">
+                <button type="button" onclick="Reponse(true, this)">Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</button>
+                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            </div>
         </div>
-      </div>
-      <div class="question">
-        <p>Les refuges ne prennent que les animaux en bonne santé</p>
-        <div class="options">
-          <button onclick="checkAnswer(this, true)">Vrai, ils refusent les animaux malades car c'est trop coûteux</button>
-          <button onclick="checkAnswer(this, false)">Faux</button>
+        
+        <!-- Deuxième Question -->
+        <div class="question">
+            <p>Les refuges ne prennent que les animaux en bonne santé</p>
+            <div class="options">
+                <button type="button" onclick="Reponse(true, this)">Vrai, ils refusent les animaux malades car c'est trop coûteux</button>
+                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            </div>
         </div>
-      </div>
-      <div class="question">
-        <p>Les associations ont trop de moyens grâce aux dons</p>
-        <div class="options">
-          <button onclick="checkAnswer(this, true)">Vrai, elles reçoivent beaucoup d'argent des donateurs</button>
-          <button onclick="checkAnswer(this, false)">Faux</button>
+        
+        <!-- Troisième Question -->
+        <div class="question">
+            <p>Les associations ont trop de moyens grâce aux dons</p>
+            <div class="options">
+                <button type="button" onclick="Reponse(true, this)">Vrai, elles reçoivent beaucoup d'argent des donateurs</button>
+                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            </div>
         </div>
-      </div>
     </div>
+  
+</section>
 
     <!-- SECTION 5 partie 2 -->
   
@@ -185,21 +191,21 @@
 
   <section class="container6">
     <h1>Témoignages</h1><BR>
-    <div class="testimonials">
-        <div class="testimonial">
+    <div class="temoignages">
+        <div class="temoignage">
             <img src="./images/Image temoignage Lyon.png" alt="Refuge des Quatre Pattes - Lyon">
-            <p class="testimonial-text">“Grâce aux dons, nous avons pu accueillir plus de 200 animaux cette année et leur offrir une seconde chance.”</p>
-            <p class="testimonial-author">Refuge des Quatre Pattes - Lyon</p>
+            <p class="temoignage-text">“Grâce aux dons, nous avons pu accueillir plus de 200 animaux cette année et leur offrir une seconde chance.”</p>
+            <p class="temoignage-auteur">Refuge des Quatre Pattes - Lyon</p>
         </div>
-        <div class="testimonial">
+        <div class="temoignage">
             <img src="./images/Image refuge Marseille.png" alt="Sanctuaire Animal - Marseille">
-            <p class="testimonial-text">“Le soutien de Quatre Pattes nous permet de maintenir notre mission de protection des animaux sauvés en détresse.”</p>
-            <p class="testimonial-author">Sanctuaire Animal - Marseille</p>
+            <p class="temoignage-text">“Le soutien de Quatre Pattes nous permet de maintenir notre mission de protection des animaux sauvés en détresse.”</p>
+            <p class="temoignage-auteur">Sanctuaire Animal - Marseille</p>
         </div>
-        <div class="testimonial">
+        <div class="temoignage">
             <img src="./images/Image témoignage Paris.png" alt="Refuge du Soleil - Paris">
-            <p class="testimonial-text">“Chaque don compte et nous aide à offrir un avenir meilleur aux animaux abandonnés.”</p>
-            <p class="testimonial-author">Refuge du Soleil - Paris</p>
+            <p class="temoignage-text">“Chaque don compte et nous aide à offrir un avenir meilleur aux animaux abandonnés.”</p>
+            <p class="temoignage-auteur">Refuge du Soleil - Paris</p>
         </div>
     </div>
 </section>
