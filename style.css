@@ -161,9 +161,7 @@ nav a:hover {
   padding: 40px 20px;
   background-color: #fff;
 }
-
-/* Conteneur principal */
-.don-box {
+.donation-box {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -175,72 +173,51 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
 }
-
-/* Cartes de dons */
-.don-cards {
+.donation-cards {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   width: 100%;
 }
-
-/* Box choix don */
-.don-card {
-  flex: 1;   /* spécifie l'ordre de l'élément, donation-card se trouve au dessus grâce à ça */
+.donation-card {
+  flex: 1;
   padding: 15px;
   background-color: #ffffff;
   border-radius: 10px;
   text-align: center;
   border: 1px solid #ddd;
   cursor: pointer;
-
 }
-
-/* Texte en gras */
-.don-card strong {
+.donation-card strong {
   font-size: 18px;
   display: block;
 }
 
-/* Texte en gras */
-.don-card p {
-  font-size: 13px;
-  display: block;
-  color: #555;
-}
-/* Choix du don par défaut */
-.don-card.selected {
+/* STYLE DEFINI POUR LE JS */
+.donation-card.selected {
   background-color: #e9fff0;
   border: 2px solid #3cb371;
 }
-
-
-/* Options de dons dans un container */
-.don-options {
+.donation-options {
   margin: 20px 0;
   display: flex;
   justify-content: center;
   gap: 10px;
-
 }
-/* boutons/choix en terme de fréquence */
 .option {
   padding: 8px 15px;
   border: none;
   background-color: #eee;
   border-radius: 15px;
-  cursor: pointer; 
-  /* Montre à l'utilisateur qu'il peut cliquer */
+  cursor: pointer;
 }
 
-/* Bouton fréquence choisi par défaut */
+/* STYLE DEFINI POUR LE JS */
 .option.active {
   background-color: #3cb371;
   color: white;
 }
-
-/* Bouton principal */
-.don-button {
+.donate-button {
   background-color: #d63031;
   color: white;
   border: none;
@@ -254,19 +231,14 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 }
-
-/* Réduction de l’icône */
-.don-button img {
+.donate-button img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
 }
-
-/* Change de couleur lors du survol */
-.don-button:hover {
+.donate-button:hover {
   background-color: #c0392b;
 }
-
 
 /* SECTION 3 */
 .section3 {

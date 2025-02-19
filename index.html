@@ -37,33 +37,30 @@
 <section class="section2">
     <h2>Faites un don</h2>
     
-    <div class="don-box">
-        <!-- Cartes de dons -->
-        <div class="don-cards">
-            <div class="don-card">
+    <div class="donation-box">
+        <div class="donation-cards">
+            <div class="donation-card" id="carteDon1" onclick="selectDonation('carteDon1')">
                 <strong>10€</strong>
                 <p>permet de nourrir 5 animaux pendant une journée</p>
             </div>
-            <div class="don-card">
+            <div class="donation-card" id="carteDon2" onclick="selectDonation('carteDon2')">
                 <strong>20€</strong>
                 <p>permet d’héberger un animal sauvage pendant une nuit</p>
             </div>
-            <div class="don-card selected">
+            <div class="donation-card" id="carteDon3" onclick="selectDonation('carteDon3')">
                 <strong>50€</strong>
                 <p>permet de financer les soins vétérinaires complets pour un animal</p>
             </div>
         </div>
 
-        <!-- Boutons de sélection -->
-        <div class="don-options">
-            <button class="option">Une fois</button>
-            <button class="option active">Mensuel</button>
-            <button class="option">Annuel</button>
+        <div class="donation-options">
+            <button class="option" id="optionUneFois" onclick="selectOption('optionUneFois')">Une fois</button>
+            <button class="option" id="optionMensuel" onclick="selectOption('optionMensuel')">Mensuel</button>
+            <button class="option" id="optionAnnuel" onclick="selectOption('optionAnnuel')">Annuel</button>
         </div>
 
-        <!-- Bouton principal -->
-        <button class="don-button">
-            <img src="./images/heart.PNG" alt="heart icon"> Faire un don de 50€/mois
+        <button class="donate-button" onclick="confirmDonation()">
+            <img src="./images/heart.PNG" alt="heart icon"> Faire un don
         </button>
     </div>
 </section>
