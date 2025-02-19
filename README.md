@@ -1,5 +1,4 @@
 # ECF
-# ECF
 # Projet Quatre Pattes - Site Vitrine
 
 Le projet consiste à concevoir un site vitrine pour l'association **Quatre Pattes**, une organisation à but non lucratif dédiée à la protection des animaux sauvages et domestiques. L'objectif du site est de sensibiliser le public, faciliter les dons et améliorer la visibilité de l'association.
