@@ -5,9 +5,9 @@ let compteur = 0;
     document.getElementById("display").innerHTML = compteur;
     document.getElementById("display").style.color = " #DB2727"; 
     document.getElementById("display").style.fontWeight="bold"; 
-    document.getElementById("display").style.fontSize="20px";  
+    document.getElementById("display").style.fontSize="15px";  
     document.getElementById("display").style.backgroundColor="white";
-    document.getElementById("display").style.borderRadius="30%";
+    document.getElementById("display").style.borderRadius="20%";
 
 
 }
@@ -29,9 +29,8 @@ let compteur = 0;
     }
 
     function selectOption(idOption) {
-        // Retire la sélection des autres options
         if (idOptionSelectionnee) {
-            document.getElementById(idOptionSelectionnee).classList.remove('active');
+            document.getElementById(idOptionSelectionnee).classList.remove('active');// Retire la sélection des autres options
         }
         
         // Ajoute la classe 'active' à l'option sélectionnée
@@ -44,8 +43,18 @@ let compteur = 0;
         if (idCarteSelectionnee && idOptionSelectionnee) {
             const montant = document.getElementById(idCarteSelectionnee).querySelector('strong').innerText;
             const frequence = document.getElementById(idOptionSelectionnee).innerText;
-            alert(`Vous avez sélectionné un montant de ${montant} pour une fréquence de ${frequence}.`);
+            alert(`Vous avez sélectionné un montant de ${montant} pour une fréquence ${frequence}.`);
         } else {
             alert("Veuillez sélectionner un montant et une option.");
         }
+    }
+
+
+    //SECTION 4
+
+    function ok(image, titre, description, date) {
+        document.getElementById("big").src = image;
+        document.getElementById("big-title").textContent = titre;
+        document.getElementById("big-description").textContent = description;
+        document.getElementById("big-date").textContent = date;
     }

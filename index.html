@@ -21,8 +21,8 @@
                 <p><a href="contact.html">Contact</a></p>
                 <button class="button" Onclick="incrementer()">
                     <img src="./images/heart.PNG" alt="Don"> Faire un don
+                    <div id="display"></div>
                 </button>
-                <div id="display"></div>
             </nav>
         </div>     
     </header>
@@ -95,36 +95,39 @@
 </section>
 
 <!-- SECTION 4 -->
-
 <section class="section4">
     <br><h2>Histoires de Réussite</h2><br>
     <div class="big-container">
         <div class="big-image-container">
-            <img id="big" src="./images/Luna.png" alt="Photo principale">
+            <img id="big" src="./images/Luna.png" alt="Photo principale" onclick="okbig(this.src)">
             <div class="overlay">
-                <h4 class="title">Luna</h4><br>
-                <h6 class="description">
+                <h4 id="big-title" class="title">Luna</h4><br>
+                <h6 id="big-description" class="description">
                     Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre.
                     Elle coule maintenant des jours heureux dans sa nouvelle famille.<br>
                 </h6>
-                <br><p class="date">Janvier 2024</p>
+                <br><p id="big-date" class="date">Janvier 2024</p>
             </div>
         </div>
     </div>
+
     <div class="mini-container">
         <div class="mini" id="luna">
-            <img src="./images/Luna.png" alt="Miniature 1">
+            <img id="mini" src="./images/Luna.png" alt="Miniature 1" 
+                 onclick="ok(this.src, 'Luna', 'Trouvée dans la rue avec une patte cassée, Luna a été soignée et a retrouvé sa joie de vivre.Elle coule maintenant des jours heureux dans sa nouvelle famille.', 'Janvier 2024')">
             <p>Luna</p>
         </div>
         <div class="mini" id="oscar">
-            <img src="./images/Oscar.png" alt="Miniature 2">
+            <img id="mini" src="./images/Oscar.png" alt="Miniature 2"
+                 onclick="ok(this.src, 'Oscar','Abandonné dans une forêt, Oscar était terrifié par les humains, il est devenu un chat confiant et effectueux.', 'Mars 2024')">
             <p>Oscar</p>
         </div>
         <div class="mini" id="max">
-            <img src="./images/Max.png" alt="Miniature 3">
+            <img id="mini" src="./images/Max.png" alt="Miniature 3"
+                 onclick="ok(this.src, 'Max', 'Max a été abandonné tout petit et recueilli par une association qui lui a trouvé un foyer chaleureux.', 'Juin 2022')">
             <p>Max</p>
         </div>
-    </div>
+    </div>    
 </section>
 
 
