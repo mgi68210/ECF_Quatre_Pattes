@@ -12,69 +12,68 @@
   /* HEADER */
   
   .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-/* LOGO */
-.logo-header img {
+    display: flex; /*assure que les éléments fils directs seront alignés sur une ligne*/
+    justify-content: space-between; /*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
+    align-items: center; /*Aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+    padding: 10px 20px;  /*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
+  }
+  
+  /* LOGO */
+  .logo-header img {
     width: 40px;
     height: 40px;
-}
-
-.logo-header {
-    display: flex;
-    align-items: center; 
-    gap: 8px; 
-}
-
-.logo {
+  }
+  
+  .logo-header {
+    display: flex; /*assure que les éléments fils directs seront alignés sur une ligne*/
+    align-items: center; /*Aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+    gap: 8px; /*espace entre grille et colonne*/
+  }
+  .logo {
     font-weight: bold; 
     color: white; 
     font-size: 18px;
-}
-
-/* CONTENU À DROITE */
-.right-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* MENU à droite pour liens internes */
-nav {
-    display: flex;
-    align-items: center; 
-    gap: 15px; 
-}
-
-/* style des liens pour naviguer en interne  */
-nav p {
+  }
+  
+  /* CONTENU À DROITE */
+  .right-container {
+    display: flex; /*assure que les éléments fils directs seront alignés sur une ligne*/
+    align-items: center; /*Aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+    gap: 20px;/*gap gère l'espacement entre les éléments dans flex, grid et columns*/
+  }
+  
+  /* MENU à droite pour liens internes */
+  nav {
+    display: flex; /*assure que les éléments fils directs seront alignés sur une ligne*/
+    align-items: center;  /*Aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+    gap: 15px; /*gap gère l'espacement entre les éléments dans flex, grid et columns*/
+  }
+  
+  /* style des liens pour naviguer en interne  */
+  nav p {
     margin: 0; /* Retire les marges par défaut */
     color: white;
     font-size: 16px;
     cursor: pointer; /* permet de montrer à l'utilisateur qu'il peut cliquer au survol*/
-}
-
-/*Style lien texte*/
-nav a {
+  }
+  
+  /*Style lien texte*/
+  nav a {
     text-decoration: none;
     color: white; 
     font-size: 16px;
     cursor: pointer;
-}
-
-/*Style lien texte lors du survol */
-nav a:hover {
+  }
+  
+  /*Style lien texte lors du survol */
+  nav a:hover {
     text-decoration: underline; /* Ajoute le soulignement au survol */
-}
-
-/* BOUTON DON */
-.button {
-    display: flex;
-    align-items: center;
+  }
+  
+  /* BOUTON DON */
+  .button {
+    display: flex; /*assure que les éléments fils directs seront alignés sur une ligne*/
+    align-items: center; /*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
     background-color: #DB2727;
     color: white;
     border: none;
@@ -83,19 +82,20 @@ nav a:hover {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-}
-
-/* Icon coeur du bouton */
-.button img {
+  }
+  
+  /* Icon coeur du bouton */
+  .button img {
     width: 16px;
     height: 16px;
     margin-right: 8px;
-}
-
-/* Effet sur le bouton lorsque le curseur survol */
-.button:hover {
+  }
+  
+  /* Effet sur le bouton lorsque le curseur survol */
+  .button:hover {
     background-color: darkred;
-}
+  }
+    
   
 
 /* SECTION FORMULAIRE */
@@ -172,81 +172,85 @@ nav a:hover {
     background-color: #025b2f;
 }
 
-     /* FOOTER*/
 
-     .footer {
-        background-color: #000;
-        color: #fff;
-        padding: 40px; 
-        display: flex;
-        justify-content: space-between;
-    }
+/* FOOTER*/
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px; /*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
+    display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+    justify-content: space-between;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
+  }
     .footer-column {
-        flex: 1; /* place au dessus */
-        padding: 0 20px; /* Ajout de marge entre les colonnes */
-    }
+    flex: 1; /*utilisée dans un conteneur flexbox pour contrôler comment un élément enfant grandit, rétrécit et quelle est sa taille de base*/
+    padding: 0 20px; /* Ajout d'espace entre les colonnes */
+    margin-bottom: 30px;
+  
+  }
     .footer-column h3 {
-        margin-top: 0;
-    }
+    margin-top: 0; /*marge 0 du top par defaut*/
+  }
     .footer-column p, .footer-column a {
-        color: #fff;
-        text-decoration: none;
-        line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
-    }
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8; /* Augmentation de l'espacement entre les lignes */
+  }
     .footer-column .contact-icon {
-        display: inline-block; /*Cette propriété combine les caractéristiques des éléments en ligne (inline) et des blocs (block)*/
-        vertical-align: middle; /* aligne le milieu de l'élément avec le milieu de la ligne de base de l'élément parent*/
-        /* utilisé pour aligner verticalement des éléments en ligne ou des éléments en ligne-bloqués par rapport à la ligne de base de l'élément parent ou du conteneur */
-        margin-right: 10px;
-    }
+    display: inline-block;/*Combine les avantages des éléments block (taille personnalisable) avec le flux inline*/
+    vertical-align: middle;
+    margin-right: 5%;
+  }
+  
+
+/* RENDRE MA PAGE RESPONSIVE */
 
 
-
-    /* RENDRE MA PAGE RESPONSIVE */
-
-    @media screen and (max-width: 768px) {
-      /* Pour situé tout l'en tête en colonne à gauche */
-      .header {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          width: 100%;
-      }
+@media screen and (max-width: 768px) {
+    /* Pour situé tout l'en tête en colonne à gauche */
+  .header {
+  display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+  flex-direction: column;
+  gap: 10px; /* Espacement entre les éléments */
+  align-items: flex-start;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+  width: 100%;
+}
   
-      /* Pour s'assurer que les liens internes sont bien situés à gauche */
-      .header-nav {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 10px; /* Espacement entre les liens */
-          width: 100%;
-      }
+  /* Pour s'assurer que les liens internes sont bien situés à gauche */
+  .header-nav {
+  display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+  flex-direction: column;
+  align-items: flex-start;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+  gap: 10px; /* Espacement entre les liens */
+  width: 100%;
+}
   
-      /* Rendre le bouton responsive */
-      .button {
-          width: 100%; /* Prend toute la largeur disponible */
-          max-width: none; /* S'assure qu'il s'étire bien */
-          text-align: left; /* Alignement du texte */
-          display: flex;
-          align-items: center; /* Centre verticalement le contenu */
-          justify-content: flex-start; /* Aligne le texte et l'image à gauche */
-          background-color: #ff6b6b; 
-          color: white;
-          cursor: pointer; /*indique à l'utilisateur que c'est cliquable*/
-      }
+/* Rendre le bouton responsive */
+  .button {
+  width: 100%; /* Prend toute la largeur disponible */
+  max-width: none; /* S'assure qu'il s'étire bien */
+  text-align: left; /* Alignement du texte */
+  display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: flex-start; /* Aligne le texte et l'image à gauche */
+  background-color: #DB2727;
+  color: white;
+  cursor: pointer; /*indique à l'utilisateur que c'est cliquable*/
+}
   
-      /* Ajustement du coeur à l'intérieur du bouton */
-      .button img {
-          width: 24px; 
-          height: auto;
-          margin-right: 8px; /* Espace entre le coeur et le texte */
-      }
+/* Ajustement du coeur à l'intérieur du bouton */
+  .button img {
+  width: 24px; 
+  height: auto;
+  margin-right: 8px; /* Espace entre le coeur et le texte */
+}
   
-      /* Pour que la div contenant le bouton prenne toute la largeur */
-      .right-container {
-          width: 100%;
-      }
+/* Pour que la div contenant le bouton prenne toute la largeur */
+  .right-container {
+  width: 100%;
+}
   
+      /* SECTION 1 */
       /* Formulaire de contact: ajuste la largeur sans changer la disposition */
       .contact-form {
           width: 100%;
@@ -254,13 +258,35 @@ nav a:hover {
           margin: 0 auto; /* Permet de centrer le formulaire */
       }
   
-      /* Footer Aligner à gauche de la page*/
-      .footer {
-          display: flex;
-          flex-direction: column;
-          gap: 10px; /* Espacement entre les liens */
-          align-items: flex-start;
-      }
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; /* Espacement entre les éléments */
+    align-items: flex-start; /* Aligne tous les enfants à gauche */
+  }
+  
+  /* Chaque colonne dans le footer */
+  .footer-column {
+    display: flex; /* Met les éléments en ligne (icône + texte) */
+    flex-direction: column; 
+    align-items: left; 
+    gap: 8px; /* Espacement entre l'icône et le texte */
+  }
+  
+  /* Icône de contact */
+  .footer-column .contact-icon {
+    margin-right: 5px; /* Un peu de marge entre l'icône et le texte */
+  }
+  
+  /* Le texte ou le lien à droite de l'icône */
+  .footer-column p, .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8;
+  }
+  
   }
   
   
