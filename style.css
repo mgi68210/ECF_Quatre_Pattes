@@ -116,6 +116,7 @@ nav a:hover {
   justify-content: center;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
   align-items: center;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
   text-align: center;
+
 }
 
 /* FILTRE SUR LA BACKGROUND IMAGE  */
@@ -139,14 +140,14 @@ nav a:hover {
 
 .h1s1 {
   color: white;
-  font-size: 36px;
+  font-size: 50px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*ombres du texte*/
 }
 
 .p1s1 {
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*ombres du texte*/
 }
 
@@ -381,6 +382,8 @@ nav a:hover {
 
 /* Conteneur des images miniatures */
 .mini-container {
+  background-color: white;
+  margin-bottom: 5%;
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   justify-content: space-between;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
   width: 100%;
@@ -444,15 +447,16 @@ nav a:hover {
   flex-direction: column;
   align-items: center; /*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
   justify-content: flex-start;  /* les élements sont en haut */
-  height: 100vh;  /* prend toute la position de la fenêtre */
   text-align: center;
   padding: 20px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
 }
 
 /* Titre principal de la section */
 h2 {
+  text-align: center;
   font-size: 28px;
   margin-bottom: 10px; /*espace sous le titre*/
+  margin-top: 10px; /*espace au dessus le titre*/
 }
 
 /* Section Quizz */
@@ -508,8 +512,17 @@ h2 {
 
 /* SECTION 5 PARTIE 2 */
 /* Impact Section */
-
 .impact-section {
+  background-color: #eafaf1;
+  margin: 0; /*marge 0 par défaut*/
+  padding: 0;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
+  display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
+  flex-direction: column;
+  align-items: center; /*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
+  justify-content: flex-start;  /* les élements sont en haut */
+}
+
+.impact {
   width: 100vw; /* Fixer la largeur à 100% de la fenêtre */
   max-width: 100%;
   margin: 20px 0;
@@ -522,7 +535,10 @@ h2 {
 /* style titre de section impact */
 .impact-section h2 {
   color: #333333;
-  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px; /*espace sous le titre*/
+  margin-top: 10px; /*espace au dessus le titre*/
 }
 
 /* container impact */
@@ -533,6 +549,7 @@ h2 {
   width: 100%;
   gap: 20px; /*gap gère l'espacement entre les éléments dans flex, grid et columns*/
   margin-top: 50px; /* marge du haut*/
+  margin-bottom: 5%;
 }
 
 /* elements dans le container impact-stats */
@@ -574,12 +591,21 @@ h2 {
   padding: 40px 20px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
 }
 
+.grostitre {
+  color: #333333;
+  text-align: center;
+  font-weight: bold; 
+  font-size: 28px;
+  margin-bottom: 40px; /*espace sous le titre*/
+  margin-top: 10px; /*espace au dessus le titre*/ 
+}
+
 /* Container des trois box testimonial */
 .temoignages {
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: space-evenly; /* Espacement égal entre les témoignages */
-  gap: 20px; /*gap gère l'espacement entre les éléments dans flex, grid et columns*/
+  gap: 30px; /*gap gère l'espacement entre les éléments dans flex, grid et columns*/
   width: 100%;
 }
 
@@ -632,13 +658,15 @@ h2 {
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 40px; /*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
+  padding: 20px; /*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   justify-content: space-between;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
 }
   .footer-column {
   flex: 1; /*utilisée dans un conteneur flexbox pour contrôler comment un élément enfant grandit, rétrécit et quelle est sa taille de base*/
   padding: 0 20px; /* Ajout d'espace entre les colonnes */
+  margin-bottom: 30px;
+
 }
   .footer-column h3 {
   margin-top: 0; /*marge 0 du top par defaut*/
@@ -651,7 +679,7 @@ h2 {
   .footer-column .contact-icon {
   display: inline-block;/*Combine les avantages des éléments block (taille personnalisable) avec le flux inline*/
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 5%;
 }
 
   .section1, .section2, .section3, .section4, .section5, .section6 {
