@@ -69,99 +69,101 @@ function confirmDon() {
     }
 
     //SECTION 5
-    // let score = 0;
-    // let reponseQuestions = 0;
-    // let totalQuestions = 3;
-    
-    // const reponses = {
-    //     "q1": "Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.",
-    //     "q2": "Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !",
-    //     "q3": "Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux."
-    // };
-    
-    // function repondre(correct, id) {
-    //     let message = document.getElementById(id);
-    
-    //     if (correct) {
-    //         message.style.background = " #057858";
-    //         message.style.color = "white";
-    //         message.style.textAlign = "left";
-    //         message.style.padding = "10px 20px";
-    //         message.style.border = "none";
-    //         message.style.borderRadius = "5px";
-
-    //     } else {
-    //         message.style.background = "#DB2727";
-    //         message.style.color = "white";
-    //         message.style.textAlign = "left";
-    //         message.style.padding = "10px 20px";
-    //         message.style.border = "none";
-    //         message.style.borderRadius = "5px";
-    //     }
-    
-    //     if (correct) {
-    //         message.textContent = "Vrai ! " + reponses[id];
-    //     } else {
-    //         message.textContent = "Faux ! " + reponses[id];
-    //     }
-    
-    //     if (correct) score++;
-    //     reponseQuestions++;
-    
-    //     document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
-    // }
-
     let score = 0;
     let reponseQuestions = 0;
     let totalQuestions = 3;
-
-function repondre(correct, id) {
-    let message;
-
-    if (id === "q1") {
-        message = document.getElementById("q1");
+    
+    const reponses = {
+        "q1": "Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.",
+        "q2": "Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !",
+        "q3": "Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux."
+    };
+    
+    function repondre(correct, id) {
+        let message = document.getElementById(id);
+    
         if (correct) {
-            message.style.background = "green";
+            message.style.background = " #057858";
             message.style.color = "white";
-            message.textContent = "Vrai ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
-            score++;
+            message.style.textAlign = "left";
+            message.style.padding = "10px 20px";
+            message.style.border = "none";
+            message.style.borderRadius = "5px";
+
         } else {
-            message.style.background = "red";
+            message.style.background = "#DB2727";
             message.style.color = "white";
-            message.textContent = "Faux ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
+            message.style.textAlign = "left";
+            message.style.padding = "10px 20px";
+            message.style.border = "none";
+            message.style.borderRadius = "5px";
         }
+    
+        if (correct) {
+            message.textContent = "Vrai ! " + reponses[id];
+        } else {
+            message.textContent = "Faux ! " + reponses[id];
+        }
+    
+        if (correct) score++;
+        reponseQuestions++;
+    
+        document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
     }
 
-    if (id === "q2") {
-        message = document.getElementById("q2");
-        if (correct) {
-            message.style.background = "green";
-            message.style.color = "white";
-            message.textContent = "Vrai ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
-            score++;
-        } else {
-            message.style.background = "red";
-            message.style.color = "white";
-            message.textContent = "Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
-        }
-    }
+    // ANCIEN CODE
+    
+//     let score = 0;
+//     let reponseQuestions = 0;
+//     let totalQuestions = 3;
 
-    if (id === "q3") {
-        message = document.getElementById("q3");
-        if (correct) {
-            message.style.background = "green";
-            message.style.color = "white";
-            message.textContent = "Vrai ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
-            score++;
-        } else {
-            message.style.background = "red";
-            message.style.color = "white";
-            message.textContent = "Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
-        }
-    }
+// function repondre(correct, id) {
+//     let message;
 
-    reponseQuestions++;
-    document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
-}
+//     if (id === "q1") {
+//         message = document.getElementById("q1");
+//         if (correct) {
+//             message.style.background = "green";
+//             message.style.color = "white";
+//             message.textContent = "Vrai ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
+//             score++;
+//         } else {
+//             message.style.background = "red";
+//             message.style.color = "white";
+//             message.textContent = "Faux ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
+//         }
+//     }
+
+//     if (id === "q2") {
+//         message = document.getElementById("q2");
+//         if (correct) {
+//             message.style.background = "green";
+//             message.style.color = "white";
+//             message.textContent = "Vrai ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
+//             score++;
+//         } else {
+//             message.style.background = "red";
+//             message.style.color = "white";
+//             message.textContent = "Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
+//         }
+//     }
+
+//     if (id === "q3") {
+//         message = document.getElementById("q3");
+//         if (correct) {
+//             message.style.background = "green";
+//             message.style.color = "white";
+//             message.textContent = "Vrai ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
+//             score++;
+//         } else {
+//             message.style.background = "red";
+//             message.style.color = "white";
+//             message.textContent = "Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
+//         }
+//     }
+
+//     reponseQuestions++;
+//     document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
+// }
 
 
