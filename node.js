@@ -2,13 +2,20 @@
 let compteur = 0; 
    function incrementer(){
     compteur++;
+    let display = document.getElementById("display");
     document.getElementById("display").innerHTML = compteur;
     document.getElementById("display").style.color = " #DB2727"; 
     document.getElementById("display").style.fontWeight="bold"; 
     document.getElementById("display").style.fontSize="15px";  
     document.getElementById("display").style.backgroundColor="white";
     document.getElementById("display").style.borderRadius="20%";
-
+    
+    display.innerHTML = compteur;
+    display.style.color = "#DB2727"; 
+    display.style.fontWeight = "bold"; 
+    display.style.fontSize = "15px";  
+    display.style.backgroundColor = "white";
+    display.style.borderRadius = "20%";
 
 }
 
@@ -48,6 +55,7 @@ function confirmDon() {
     let frequence = optionSelectionnee.innerHTML;
 
     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
+    incrementer(); 
 }
 
 
