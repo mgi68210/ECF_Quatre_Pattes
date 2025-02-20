@@ -79,7 +79,7 @@ function confirmDon() {
     let frequence = optionSelectionnee.innerHTML;
     // On récupère la frequence, le texte de l'option se trouvant dans l'html 
 
-    alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
+    alert("Vous avez choisi un don de " + montant + " avec une fréquence " + frequence + ".");
     // On affiche une alert qui indique le montant et la fréquence du don choisis
 
     incrementer(); 
@@ -156,111 +156,5 @@ function confirmDon() {
     }
 
 
-
-// ANCIENS CODES
-
-        // ANCIEN CODE SECTION 2
-
-// let idCarteSelectionnee = "";
-// let idOptionSelectionnee = "";
-
-// function selectDon(idCarte) {
-//     if (idCarteSelectionnee !== "") {
-//         let ancienneCarte = document.getElementById(idCarteSelectionnee);
-//         ancienneCarte.classList.remove("selected");
-//     }
-
-//     let carte = document.getElementById(idCarte);
-//     carte.classList.add("selected");
-
-//     idCarteSelectionnee = idCarte;
-// }
-
-// function selectOption(idOption) {
-//     if (idOptionSelectionnee !== "") {
-//         let ancienneOption = document.getElementById(idOptionSelectionnee);
-//         ancienneOption.classList.remove("active");
-//     }
-
-//     let option = document.getElementById(idOption);
-//     option.classList.add("active");
-
-//     idOptionSelectionnee = idOption;
-// }
-
-// function confirmDon() {
-//     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
-//         alert("Veuillez sélectionner un montant et une fréquence.");
-//         return; // Si l'un des deux n'est pas sélectionné, on arrête la fonction et n'affiche pas l'alerte
-//     }
-
-//     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-//     let montant = carteSelectionnee.querySelector("strong").innerHTML; // On utilise querySelector pour cibler le <strong>
-
-//     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
-//     let frequence = optionSelectionnee.innerHTML;
-
-//     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
-
-// }
-
-
-
-
-
-    // ANCIEN CODE POUR LA SECTION 5
-    
-//     let score = 0;
-//     let reponseQuestions = 0;
-//     let totalQuestions = 3;
-
-// function repondre(correct, id) {
-//     let message;
-
-//     if (id === "q1") {
-//         message = document.getElementById("q1");
-//         if (correct) {
-//             message.style.background = "green";
-//             message.style.color = "white";
-//             message.textContent = "Vrai ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
-//             score++;
-//         } else {
-//             message.style.background = "red";
-//             message.style.color = "white";
-//             message.textContent = "Faux ! Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.";
-//         }
-//     }
-
-//     if (id === "q2") {
-//         message = document.getElementById("q2");
-//         if (correct) {
-//             message.style.background = "green";
-//             message.style.color = "white";
-//             message.textContent = "Vrai ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
-//             score++;
-//         } else {
-//             message.style.background = "red";
-//             message.style.color = "white";
-//             message.textContent = "Faux ! Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !";
-//         }
-//     }
-
-//     if (id === "q3") {
-//         message = document.getElementById("q3");
-//         if (correct) {
-//             message.style.background = "green";
-//             message.style.color = "white";
-//             message.textContent = "Vrai ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
-//             score++;
-//         } else {
-//             message.style.background = "red";
-//             message.style.color = "white";
-//             message.textContent = "Faux ! Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux.";
-//         }
-//     }
-
-//     reponseQuestions++;
-//     document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
-// }
 
 
