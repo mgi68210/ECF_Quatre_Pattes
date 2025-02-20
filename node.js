@@ -87,53 +87,6 @@ function confirmDon() {
 
 }
 
-// ANCIEN CODE Section 2
-// let idCarteSelectionnee = "";
-// let idOptionSelectionnee = "";
-
-// function selectDon(idCarte) {
-//     if (idCarteSelectionnee !== "") {
-//         let ancienneCarte = document.getElementById(idCarteSelectionnee);
-//         ancienneCarte.classList.remove("selected");
-//     }
-
-//     let carte = document.getElementById(idCarte);
-//     carte.classList.add("selected");
-
-//     idCarteSelectionnee = idCarte;
-// }
-
-// function selectOption(idOption) {
-//     if (idOptionSelectionnee !== "") {
-//         let ancienneOption = document.getElementById(idOptionSelectionnee);
-//         ancienneOption.classList.remove("active");
-//     }
-
-//     let option = document.getElementById(idOption);
-//     option.classList.add("active");
-
-//     idOptionSelectionnee = idOption;
-// }
-
-// function confirmDon() {
-//     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
-//         alert("Veuillez sélectionner un montant et une fréquence.");
-//         return; // Si l'un des deux n'est pas sélectionné, on arrête la fonction et n'affiche pas l'alerte
-//     }
-
-//     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-//     let montant = carteSelectionnee.querySelector("strong").innerHTML; // On utilise querySelector pour cibler le <strong>
-
-//     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
-//     let frequence = optionSelectionnee.innerHTML;
-
-//     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
-
-// }
-
-
-
-
 
     //SECTION 4
 
@@ -204,8 +157,58 @@ function confirmDon() {
 
 
 
+// ANCIENS CODES
 
-    // ANCIEN CODE Section 5
+        // ANCIEN CODE SECTION 2
+
+// let idCarteSelectionnee = "";
+// let idOptionSelectionnee = "";
+
+// function selectDon(idCarte) {
+//     if (idCarteSelectionnee !== "") {
+//         let ancienneCarte = document.getElementById(idCarteSelectionnee);
+//         ancienneCarte.classList.remove("selected");
+//     }
+
+//     let carte = document.getElementById(idCarte);
+//     carte.classList.add("selected");
+
+//     idCarteSelectionnee = idCarte;
+// }
+
+// function selectOption(idOption) {
+//     if (idOptionSelectionnee !== "") {
+//         let ancienneOption = document.getElementById(idOptionSelectionnee);
+//         ancienneOption.classList.remove("active");
+//     }
+
+//     let option = document.getElementById(idOption);
+//     option.classList.add("active");
+
+//     idOptionSelectionnee = idOption;
+// }
+
+// function confirmDon() {
+//     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
+//         alert("Veuillez sélectionner un montant et une fréquence.");
+//         return; // Si l'un des deux n'est pas sélectionné, on arrête la fonction et n'affiche pas l'alerte
+//     }
+
+//     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
+//     let montant = carteSelectionnee.querySelector("strong").innerHTML; // On utilise querySelector pour cibler le <strong>
+
+//     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
+//     let frequence = optionSelectionnee.innerHTML;
+
+//     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
+
+// }
+
+
+
+
+
+    // ANCIEN CODE POUR LA SECTION 5
     
 //     let score = 0;
 //     let reponseQuestions = 0;
