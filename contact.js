@@ -7,84 +7,98 @@ let compteur = 0;
 
     compteur++;     // Incrémente la valeur de 1 au compteur
     let display = document.getElementById("display");     // Appelle l'élément html avec l'id display
-    document.getElementById("display").style.color = " #DB2727"; // ajout de plusieurs styles
+    document.getElementById("display").style.color = " #DB2727";
     document.getElementById("display").style.fontWeight="bold"; 
     document.getElementById("display").style.fontSize="15px";  
     document.getElementById("display").style.backgroundColor="white";
     document.getElementById("display").style.borderRadius="20%";
-    
+     // ajout de plusieurs styles
+
+    display.innerHTML = compteur; // synchronisation de l'élélement 'display' html avec la nouvelle valeur du 'compteur'
     //Lien avec la section 2 (le resultat de l'utilisateur de la section 2 s'incrémentera dans le bouton du header)
-    display.innerHTML = compteur; // synchro de l'élélement 'display' html avec la nouvelle valeur du 'compteur'
+
    }
    
 
 
-// Dynamisation du formulaire
+// FORMULAIRE
 
+// J'ajoute un écouteur d'événement sur le formulaire, avec l'ID 'contactForm', pour capturer sa soumission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); 
-    validationForm();
+    e.preventDefault(); // Empêche le rechargement de la page lors de la soumission du formulaire
+    validationForm(); // J'appelle la fonction de validation du formulaire
 });
 
+
 function validationForm() {
+    // On récupère les valeurs des champs du formulaire
     let userName = document.getElementById('name').value;
     let userEmail = document.getElementById('email').value;
     let userMessage = document.getElementById('message').value;
 
+    // On récupère les éléments où les messages d'erreur seront affichés
     let errorName = document.getElementById('error-name');
     let errorEmail = document.getElementById('error-email');
     let errorMessage = document.getElementById('error-message');
 
+    // Je crée une variable pour suivre l'état de validation du formulaire.
     let isValid = true;
 
-    // Validation du nom
+    // Pour la validation du champ 'Nom'
     if (userName === "") {
-        errorName.innerHTML = "Le nom est obligatoire!";
-        errorName.style.color = " #DB2727";        
-        errorName.style.fontSize = "20px";     
-        errorName.style.fontWeight = "bold";   
-        errorName.style.border="2px solid #057858";
-
-        isValid = false;
+        // Si l'espace texte utilisateur est vide 
+        errorName.innerHTML = "Le nom est obligatoire!"; // Un message d'erreur apparait dans le html
+        // J'ajoute des styles pour indiquer l'erreur
+        errorName.style.color = "#DB2727";
+        errorName.style.fontSize = "20px";
+        errorName.style.fontWeight = "bold";
+        errorName.style.border = "2px solid #057858";
+        isValid = false; // Le formulaire n'est pas valide
     } else {
-        errorName.innerHTML = "";
+        errorName.innerHTML = ""; // Réinitialise le message d'erreur
     }
 
-    // Validation de l'email
+    // Pour la validation du champ 'Email'
     if (userEmail === "") {
-        errorEmail.innerHTML = "L'email est obligatoire!";
-        errorEmail.style.color = " #DB2727";        
-        errorEmail.style.fontSize = "20px";     
-        errorEmail.style.fontWeight = "bold";   
-        errorEmail.style.border="2px solid #057858"
-        isValid = false;
+        // Si l'espace texte utilisateur est vide 
+        errorEmail.innerHTML = "L'email est obligatoire!";// Un message d'erreur apparait dans le html
+        // J'ajoute des styles pour indiquer l'erreur
+        errorEmail.style.color = "#DB2727";
+        errorEmail.style.fontSize = "20px";
+        errorEmail.style.fontWeight = "bold";
+        errorEmail.style.border = "2px solid #057858";
+        isValid = false; // Le formulaire n'est pas valide
+
     } else if (!userEmail.includes("@")) {
-        errorEmail.innerHTML = "L'email doit contenir un '@'.";
-        errorEmail.style.color = " #DB2727";        
-        errorEmail.style.fontSize = "20px";     
-        errorEmail.style.fontWeight = "bold";   
-        errorEmail.style.border="2px solid #057858"
-        isValid = false;
+        // Si l'espace texte utilisateur ne contient pas de @  
+        errorEmail.innerHTML = "L'email doit contenir un '@'."; // Un message d'erreur apparait dans le html
+        // J'ajoute des styles pour indiquer l'erreur
+        errorEmail.style.color = "#DB2727";
+        errorEmail.style.fontSize = "20px";
+        errorEmail.style.fontWeight = "bold";
+        errorEmail.style.border = "2px solid #057858";
+        isValid = false; // Le formulaire n'est pas valide
     } else {
-        errorEmail.innerHTML = "";
+        errorEmail.innerHTML = ""; // Réinitialise le message d'erreur
     }
 
-    // Validation du message
+    // Pour la validation du champ 'Message'
     if (userMessage === "") {
-        errorMessage.innerHTML = "Le message est obligatoire!";
-        errorMessage.style.color = " #DB2727";        
-        errorMessage.style.fontSize = "20px";     
-        errorMessage.style.fontWeight = "bold";   
-        errorMessage.style.border="2px solid #057858"
-        
-        isValid = false;
+        // Si l'espace texte utilisateur est vide 
+        errorMessage.innerHTML = "Le message est obligatoire!"; // Un message d'erreur apparait dans le html
+        // Application de styles pour indiquer l'erreur
+        errorMessage.style.color = "#DB2727";
+        errorMessage.style.fontSize = "20px";
+        errorMessage.style.fontWeight = "bold";
+        errorMessage.style.border = "2px solid #057858";
+        isValid = false; // Le formulaire n'est pas valide
     } else {
-        errorMessage.innerHTML = "";
+        errorMessage.innerHTML = "";// Réinitialise le message d'erreur
     }
 
-    // Si tout est valide
+    // Si tous les champs sont valides et remplis
     if (isValid) {
-        alert("Formulaire envoyé avec succès!");
-        document.getElementById('contactForm').reset();  // Réinitialiser le formulaire
+        alert("Formulaire envoyé avec succès!"); // Affiche une alerte de succès
+        document.getElementById('contactForm').reset(); // Réinitialisation du formulaire
     }
 }
