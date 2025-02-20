@@ -339,10 +339,20 @@ nav a:hover {
   border-radius: 10px; /* Arrondi les coins de l'image aussi */
 }
 
+.big-image-container::before {
+  content: "";
+  position: absolute;/*ajuste sa position par rapport à son parent*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
 /* Overlay du texte */
 /* Affichage au-dessus du contenu principal  */
 .overlay {
-  position: absolute;
+  position: absolute;/*ajuste sa position par rapport à son parent*/
   bottom: 0;
   left: 0;
   width: 100%;
@@ -395,6 +405,18 @@ nav a:hover {
   align-items: center; /* Centre verticalement */
 }
 
+.mini::before {
+  content: "";
+  position: absolute;/*ajuste sa position par rapport à son parent*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Filtre noir semi-transparent */
+  border-radius: 10px;
+  pointer-events: none; /* Permet de cliquer à travers l'overlay */
+}
+
 
 /* images miniatures  */
 .mini img {
@@ -404,10 +426,11 @@ nav a:hover {
   border-radius: 10px; 
 }
 
+
 /* Texte centré dans les miniatures */
 
 .mini p {
-  position: absolute;
+  position: absolute;/*ajuste sa position par rapport à son parent*/
   color: white;
   font-size: 16px;
   font-weight: bold;
