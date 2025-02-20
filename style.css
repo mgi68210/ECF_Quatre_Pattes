@@ -697,7 +697,7 @@ h2 {
 
 /* RENDRE MA PAGE RESPONSIVE */
 
-
+/* Pour mobiles et tablettes */
   @media screen and (max-width: 768px) {
     /* Pour situé tout l'en tête en colonne à gauche */
   .header {
