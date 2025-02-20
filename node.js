@@ -1,4 +1,9 @@
-//    Faire un don header
+                                // CODE JAVASCRIPT POUR LA PAGE ACCUEIL
+
+
+        //BOUTON "FAIRE UN DON" DANS LE HEADER
+
+
 let compteur = 0; 
 // j'initialise le compteur à 0
 
@@ -23,7 +28,9 @@ let compteur = 0;
 
 }
 
-// SECTION 2
+
+
+        // SECTION 2
 
 // Variables avec le stock des identifiants des éléments sélectionnés
 let idCarteSelectionnee = "";
@@ -88,7 +95,10 @@ function confirmDon() {
 }
 
 
-    //SECTION 4
+
+
+
+            //SECTION 4
 
 
     function ok(image, titre, description, date) {
@@ -101,8 +111,12 @@ function confirmDon() {
     }
 
 
+
+
     
-    //SECTION 5
+            //SECTION 5
+
+
     let score = 0;
     // score initialisé à 0
     let reponseQuestions = 0;

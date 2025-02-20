@@ -1,4 +1,9 @@
-//    Faire un don header
+                                // CODE JAVASCRIPT POUR LA PAGE ACCUEIL
+
+
+        //BOUTON "FAIRE UN DON" DANS LE HEADER
+
+
 let compteur = 0; 
 // j'initialise le compteur à 0
 
@@ -21,7 +26,7 @@ let compteur = 0;
    
 
 
-// FORMULAIRE
+        // FORMULAIRE
 
 // J'ajoute un écouteur d'événement sur le formulaire, avec l'ID 'contactForm', pour capturer sa soumission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
