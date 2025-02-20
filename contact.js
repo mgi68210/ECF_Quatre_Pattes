@@ -1,4 +1,4 @@
-                                // CODE JAVASCRIPT POUR LA PAGE ACCUEIL
+                                // CODE JAVASCRIPT POUR LA PAGE CONTACT
 
 
         //BOUTON "FAIRE UN DON" DANS LE HEADER
