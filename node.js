@@ -38,8 +38,8 @@ let idOptionSelectionnee = ""; // Id de la fréquence sélectionnée
 function selectDon(idCarte) {
 // Fonction appelée lorsqu'une carte de don est sélectionnée, l'idCarte est d'id de la carte de don sélectionnée.
     if (idCarteSelectionnee !== "") {
-        document.getElementById(idCarteSelectionnee).classList.remove("selected");
-        // SI on clique sur une autre carte de don, on retire la classe 'selected' (qui se trouve dans le css) de cette carte
+    document.getElementById(idCarteSelectionnee).classList.remove("selected");
+    // SI on clique sur une autre carte de don, on retire la classe 'selected' (qui se trouve dans le css) de cette carte
     }
     document.getElementById(idCarte).classList.add("selected");
     // En conséquence, on ajoute la classe 'selected' à la nouvelle carte de don sélectionnée
@@ -53,8 +53,8 @@ function selectDon(idCarte) {
 function selectOption(idOption) {
 // Fonction appelée lorsqu'une option de fréquence est sélectionnée, l'idOption est d'id de la carte de don sélectionnée.
     if (idOptionSelectionnee !== "") {
-        document.getElementById(idOptionSelectionnee).classList.remove("active");
-         // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
+    document.getElementById(idOptionSelectionnee).classList.remove("active");
+    // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
     }
     document.getElementById(idOption).classList.add("active");
     // En conséquence, on ajoute la classe 'active' à la nouvelle option de fréquence sélectionnée
@@ -117,7 +117,6 @@ function confirmDon() {
     // Enfin, on réinitialise les id des sélections pour qu'ils soient vides
 
 }
-
 
 
 
