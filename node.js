@@ -58,3 +58,46 @@ let compteur = 0;
         document.getElementById("big-description").textContent = description;
         document.getElementById("big-date").textContent = date;
     }
+
+    //SECTION 5
+    let score = 0;
+    let reponseQuestions = 0;
+    let totalQuestions = 3;
+    
+    const reponses = {
+        "q1": "Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.",
+        "q2": "Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !",
+        "q3": "Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux."
+    };
+    
+    function repondre(correct, id) {
+        let message = document.getElementById(id);
+    
+        if (correct) {
+            message.style.background = "green";
+            message.style.color = "white";
+            message.style.textAlign = "left";
+            message.style.padding = "10px 20px";
+            message.style.border = "none";
+            message.style.borderRadius = "5px";
+
+        } else {
+            message.style.background = "red";
+            message.style.color = "white";
+            message.style.textAlign = "left";
+            message.style.padding = "10px 20px";
+            message.style.border = "none";
+            message.style.borderRadius = "5px";
+        }
+    
+        if (correct) {
+            message.textContent = "Vrai ! " + reponses[id];
+        } else {
+            message.textContent = "Faux ! " + reponses[id];
+        }
+    
+        if (correct) score++;
+        reponseQuestions++;
+    
+        document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
+    }

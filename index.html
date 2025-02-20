@@ -126,6 +126,7 @@
                  onclick="ok(this.src, 'Max', 'Max a été abandonné tout petit et recueilli par une association qui lui a trouvé un foyer chaleureux.', 'Juin 2022')">
             <p>Max</p>
         </div>
+        </div>
     </div>    
 </section>
 
@@ -138,29 +139,30 @@
         <!-- Première Question -->
         <div class="question">
             <p>Les associations gardent la majorité des dons pour leur fonctionnement</p>
-            <div class="options">
-                <button type="button" onclick="Reponse(true, this)">Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</button>
-                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            <div id="q1" class="options">
+                <button type="button" onclick="repondre(false, 'q1')">Vrai, les associations utilisent plus de 50% des dons pour leurs frais de fonctionnement</button>
+                <button type="button" onclick="repondre(true, 'q1')">Faux</button>
             </div>
         </div>
         
         <!-- Deuxième Question -->
         <div class="question">
             <p>Les refuges ne prennent que les animaux en bonne santé</p>
-            <div class="options">
-                <button type="button" onclick="Reponse(true, this)">Vrai, ils refusent les animaux malades car c'est trop coûteux</button>
-                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            <div id="q2" class="options">
+                <button type="button" onclick="repondre(false, 'q2')">Vrai, ils refusent les animaux malades car c'est trop coûteux</button>
+                <button type="button" onclick="repondre(true, 'q2')">Faux</button>
             </div>
         </div>
         
         <!-- Troisième Question -->
         <div class="question">
             <p>Les associations ont trop de moyens grâce aux dons</p>
-            <div class="options">
-                <button type="button" onclick="Reponse(true, this)">Vrai, elles reçoivent beaucoup d'argent des donateurs</button>
-                <button type="button" onclick="Reponse(false, this)">Faux</button>
+            <div id="q3" class="options">
+                <button type="button" onclick="repondre(false, 'q3')">Vrai, elles reçoivent beaucoup d'argent des donateurs</button>
+                <button type="button" onclick="repondre(true, 'q3')">Faux</button>
             </div>
         </div>
+        <p id="score"></p>
     </div>
   
 </section>
