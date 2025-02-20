@@ -23,43 +23,68 @@ let compteur = 0;
 
 }
 
-// section 2 
+// SECTION 2
 
+// Variables avec le stock des identifiants des éléments sélectionnés
 let idCarteSelectionnee = "";
 let idOptionSelectionnee = "";
 
 function selectDon(idCarte) {
+// Fonction appelée lorsqu'une carte de don est sélectionnée, l'idCarte est d'id de la carte de don sélectionnée.
     if (idCarteSelectionnee !== "") {
         document.getElementById(idCarteSelectionnee).classList.remove("selected");
+        // SI on clique sur une autre carte de don, on retire la classe 'selected' (qui se trouve dans le css) de cette carte
     }
-
     document.getElementById(idCarte).classList.add("selected");
+    // En conséquence, on ajoute la classe 'selected' à la nouvelle carte de don sélectionnée
     idCarteSelectionnee = idCarte;
+    //Et donc on met à jour l'id de la carte de don sélectionnée
+
 }
 
 function selectOption(idOption) {
+// Fonction appelée lorsqu'une option de fréquence est sélectionnée, l'idOption est d'id de la carte de don sélectionnée.
+
     if (idOptionSelectionnee !== "") {
         document.getElementById(idOptionSelectionnee).classList.remove("active");
+        // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
+
     }
 
     document.getElementById(idOption).classList.add("active");
+    // En conséquence, on ajoute la classe 'active' à la nouvelle option de fréquence sélectionnée
     idOptionSelectionnee = idOption;
+    //Et donc on met à jour l'id de l'option de fréquence sélectionnée
+
 }
 
 function confirmDon() {
+    // Une fonction est appelée lors de la confirmation de don, pour se faire il faut verifier que la carte de don et l'option de fréquence ont été sectionné
+
     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
+        // On vérifie bien si une carte et une option ont été sélectionnées
         alert("Veuillez sélectionner un montant et une fréquence.");
-        return;
+        // Sinon on affiche un message d'alerte
+        return; //On arrête l'exécution de la fonction s'il manque une selection
+
     }
 
     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
+    // On récupère l'id de la carte sélectionnée
     let montant = carteSelectionnee.querySelector("strong").innerHTML;
+    // On cherche le montant du don en récupérant l'élément <strong> (qui se trouve dans le html) de la carte
 
     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
+    // On récupère l'id de l'option sélectionnée
     let frequence = optionSelectionnee.innerHTML;
+    // On récupère la frequence, le texte de l'option se trouvant dans l'html 
 
     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
+    // On affiche une alert qui indique le montant et la fréquence du don choisis
+
     incrementer(); 
+    // J'appelle la fonction au dessus, celle du header, nommée 'incrementer' pour pouvour mettre le resultat dans le bouton de l'en tête "faire un don"
+
 }
 
 // ANCIEN CODE Section 2
@@ -112,11 +137,14 @@ function confirmDon() {
 
     //SECTION 4
 
+
     function ok(image, titre, description, date) {
-        document.getElementById("big").src = image;
-        document.getElementById("big-title").textContent = titre;
-        document.getElementById("big-description").textContent = description;
-        document.getElementById("big-date").textContent = date;
+            // Fonction qui, en cliquant, met à jour la source de l'élément principal avec le chemin fourni en appelant les id
+
+        document.getElementById("big").src = image; // Met à jour la source de l'image principale
+        document.getElementById("big-title").textContent = titre;  // Met à jour le titre associé à l'image
+        document.getElementById("big-description").textContent = description; // Met à jour la description associée à l'image
+        document.getElementById("big-date").textContent = date; // Met à jour la date associée à l'image
     }
 
 
