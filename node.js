@@ -1,17 +1,21 @@
 //    Faire un don header
 let compteur = 0; 
+// j'initialise le compteur à 0
+
    function incrementer(){
-    compteur++;
-    let display = document.getElementById("display");
-    document.getElementById("display").innerHTML = compteur;
-    document.getElementById("display").style.color = " #DB2727"; 
+// Je crée une fonction nommer incrementer qui augmentera la valeur de 1 et met à jour l'affichage dans html
+
+    compteur++;     // Incrémente la valeur de 1 au compteur
+    let display = document.getElementById("display");     // Appelle l'élément html avec l'id display
+    document.getElementById("display").style.color = " #DB2727"; // ajout de plusieurs styles
     document.getElementById("display").style.fontWeight="bold"; 
     document.getElementById("display").style.fontSize="15px";  
     document.getElementById("display").style.backgroundColor="white";
     document.getElementById("display").style.borderRadius="20%";
     
-    display.innerHTML = compteur;
-    display.style.color = "#DB2727"; 
+    //Lien avec la section 2 (le resultat de l'utilisateur de la section 2 s'incrémentera dans le bouton du header)
+    display.innerHTML = compteur; // synchro de l'élélement 'display' html avec la nouvelle valeur du 'compteur'
+    display.style.color = "#DB2727"; // ajout de plusieurs styles
     display.style.fontWeight = "bold"; 
     display.style.fontSize = "15px";  
     display.style.backgroundColor = "white";
