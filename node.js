@@ -151,19 +151,28 @@ function confirmDon() {
     
     //SECTION 5
     let score = 0;
+    // score initialisé à 0
     let reponseQuestions = 0;
+    // réponses des question initialisés à 0
     let totalQuestions = 3;
+    // déclaration qu'il y a en total 3 questions
     
     const reponses = {
+    // déclaration par const, que l'objet reponses, contient ses réponses associées à chaque question
         "q1": "Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.",
         "q2": "Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !",
         "q3": "Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux."
     };
     
     function repondre(correct, id) {
+    // création d'une fonction qui est appelée lorsqu'une réponse est soumise
+    // réponse correct = indique si la réponse est correcte (true) ou incorrecte (false).
+    // id =  Cest l'identifiant de l'élément HTML où le message sera affiché.
         let message = document.getElementById(id);
+        // J'appelle l'élément HTML correspondant à l'id fourni
     
         if (correct) {
+        // J'applique des styles en fonction d'une réponse vraie
             message.style.background = " #057858";
             message.style.color = "white";
             message.style.textAlign = "left";
@@ -171,7 +180,7 @@ function confirmDon() {
             message.style.border = "none";
             message.style.borderRadius = "5px";
 
-        } else {
+        } else {// J'applique des styles en fonction d'une réponse fausse
             message.style.background = "#DB2727";
             message.style.color = "white";
             message.style.textAlign = "left";
@@ -181,16 +190,20 @@ function confirmDon() {
         }
     
         if (correct) {
-            message.textContent = "Vrai ! " + reponses[id];
+            message.textContent = "Vrai ! " + reponses[id]; // Affiche le message d'une réponse vrai en fonction de l'id
         } else {
-            message.textContent = "Faux ! " + reponses[id];
+            message.textContent = "Faux ! " + reponses[id]; // Affiche le message d'une réponse fausse en fonction de l'id
         }
     
-        if (correct) score++;
-        reponseQuestions++;
+        if (correct) score++; // Incrémente le compteur de score
+        reponseQuestions++; // Incrémente le compteur des réponses aux questions
     
         document.getElementById("score").textContent = `Vous avez ${score} bonne(s) réponse(s) sur ${totalQuestions}.`;
+        // Appelle le score et affiche dans le html le nombre de bonnes réponses sur le nombre de question 
     }
+
+
+
 
     // ANCIEN CODE Section 5
     
