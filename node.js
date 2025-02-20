@@ -86,11 +86,19 @@ function confirmDon() {
     let frequence = optionSelectionnee.innerHTML;
     // On récupère la frequence, le texte de l'option se trouvant dans l'html 
 
-    alert("Vous avez choisi un don de " + montant + " avec une fréquence " + frequence + ".");
-    // On affiche une alert qui indique le montant et la fréquence du don choisis
+    let donButton = document.querySelector('.don-button');
+    donButton.innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don de ${montant} ${frequence}`;
+    //Je mets à jour le texte du bouton de don 
+
 
     incrementer(); 
     // J'appelle la fonction au dessus, celle du header, nommée 'incrementer' pour pouvour mettre le resultat dans le bouton de l'en tête "faire un don"
+   
+
+    // Réinitialisation du montant et de la fréquence
+    // On enlève les sélections
+    carteSelectionnee.classList.remove("selected");
+    optionSelectionnee.classList.remove("active");
 
 }
 
