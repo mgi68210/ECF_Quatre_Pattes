@@ -1,4 +1,19 @@
-// 
+//    Faire un don header
+let compteur = 0; 
+   function incrementer(){
+    compteur++;
+    let display = document.getElementById("display");
+    document.getElementById("display").innerHTML = compteur;
+    document.getElementById("display").style.color = " #DB2727"; 
+    document.getElementById("display").style.fontWeight="bold"; 
+    document.getElementById("display").style.fontSize="15px";  
+    document.getElementById("display").style.backgroundColor="white";
+    document.getElementById("display").style.borderRadius="20%";
+   }
+   
+
+
+// Dynamisation du formulaire
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault(); 
