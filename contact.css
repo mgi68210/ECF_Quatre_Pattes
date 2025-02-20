@@ -290,3 +290,89 @@
   }
   
   
+
+
+  /* Styles pour les écrans jusqu'à 1024px (tablettes et mobiles) */
+@media screen and (max-width: 1024px) {
+  
+  /* En-tête en colonne */
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  /* Navigation en colonne */
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Bouton responsive */
+  .button {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #DB2727;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  /* Icône à l'intérieur du bouton */
+  .button img {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+  }
+
+  /* Conteneur du bouton en pleine largeur */
+  .right-container {
+    width: 100%;
+  }
+
+  /* Section formulaire */
+  .contact-form {
+    width: 100%;
+    max-width: 600px; /* Un peu plus large pour tablette */
+    margin: 0 auto;
+  }
+
+  /* Pied de page */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* Colonnes du footer */
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Icône de contact */
+  .footer-column .contact-icon {
+    margin-right: 5px;
+  }
+
+  /* Liens et texte du footer */
+  .footer-column p, .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8;
+  }
+}
