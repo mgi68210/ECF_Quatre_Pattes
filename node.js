@@ -18,47 +18,31 @@ let idCarteSelectionnee = "";
 let idOptionSelectionnee = "";
 
 function selectDon(idCarte) {
-
-    let carte = document.getElementById(idCarte);
-
     if (idCarteSelectionnee !== "") {
-        let ancienneCarte = document.getElementById(idCarteSelectionnee);
-        ancienneCarte.style.backgroundColor = ""; 
+        document.getElementById(idCarteSelectionnee).classList.remove("selected");
     }
 
-    carte.style.backgroundColor = "#e9fff0";
-    carte.style.border = "2px solid #3cb371"
-
+    document.getElementById(idCarte).classList.add("selected");
     idCarteSelectionnee = idCarte;
 }
 
 function selectOption(idOption) {
-    let option = document.getElementById(idOption);
-
     if (idOptionSelectionnee !== "") {
-        let ancienneOption = document.getElementById(idOptionSelectionnee);
-        ancienneOption.style.backgroundColor = ""; // Enlève la couleur
+        document.getElementById(idOptionSelectionnee).classList.remove("active");
     }
 
-    option.style.backgroundColor = " #3cb371";
-    option.style.color="white";
-
+    document.getElementById(idOption).classList.add("active");
     idOptionSelectionnee = idOption;
 }
 
 function confirmDon() {
-    if (idCarteSelectionnee === "") {
-        alert("Veuillez sélectionner un montant.");
-        return; 
-    }
-
-    if (idOptionSelectionnee === "") {
-        alert("Veuillez sélectionner une fréquence.");
-        return; 
+    if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
+        alert("Veuillez sélectionner un montant et une fréquence.");
+        return;
     }
 
     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-    let montant = carteSelectionnee.getElementsByTagName("strong")[0].innerHTML;
+    let montant = carteSelectionnee.querySelector("strong").innerHTML;
 
     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
     let frequence = optionSelectionnee.innerHTML;
