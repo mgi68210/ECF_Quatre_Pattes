@@ -207,14 +207,18 @@ nav a:hover {
   padding: 8px 15px;/*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
   border: none;
   background-color: #eee;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold; /* enlève le texte gras par defaut*/
+
 }
 
 /* STYLE DEFINI POUR LE JS */
 .option.active {
   background-color: #3cb371;
   color: white;
+  font-weight: normal; /* Le texte perd le gras quand l'option devient active */
+
 }
 .don-button {
   background-color: #d63031;
@@ -697,7 +701,7 @@ h2 {
 
 /* RENDRE MA PAGE RESPONSIVE */
 
-/* Pour mobiles et tablettes */
+
   @media screen and (max-width: 768px) {
     /* Pour situé tout l'en tête en colonne à gauche */
   .header {
@@ -778,6 +782,7 @@ h2 {
 
 /* Ajuste le conteneur principal pour éviter qu'il déborde */
 .don-box {
+  font-size: 12px;
   width: 95%;
   max-width: 500px; /* Une limite adaptée */
   padding: 20px; /*permet de définir les différents écarts de remplissage sur les côtés d'un élément*/
@@ -826,12 +831,13 @@ h2 {
   height: 50vh; /* Assurer que la hauteur est la même que celle de l'image */
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   flex-direction: column;
-  justify-content: space-between;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
+  justify-content:start;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
+  align-items: flex-start;
 }
 
 /* Suppression des marges entre les paragraphes pour pouvoir le rendre visible */
 .mission-text p {
-  font-size: 11px; 
+  font-size: 14px; 
   line-height: 1.5;
   margin: 0;
 }
@@ -844,20 +850,18 @@ h2 {
 }
 
 .big-image-container {
-  width: 100%; /* L'image occupe toute la largeur */
-  height: 300px; /* Ajuste la hauteur de l'image pour le mobile */
+  width: 98.5%; /* L'image occupe toute la largeur */
+  height: 400px; /* Ajuste la hauteur de l'image pour le mobile */
 }
 
 .mini-container {
   flex-direction: row; /* Maintient les miniatures en ligne */
-  gap: 15px; /* Ajoute un peu d'espace entre les miniatures */
-  margin-top: 20px; /* Marge au-dessus des miniatures */
   justify-content: center;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
 }
 
 /* Ajuste la taille des miniatures */
 .mini {
-  height: 140px; /* Taille des miniatures */
+  height: 100px; /* Taille des miniatures */
   display: flex; /* Utilise flexbox pour centrer le contenu */
   flex-direction: column; /* Aligne les éléments de la miniature en colonne (image + texte) */
   justify-content: center; /* Centre verticalement */
@@ -946,7 +950,6 @@ h2 {
 /* Témoignages en colonne */
 .temoignages {
   flex-direction: column; 
-  align-items: center;/*aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
   gap: 20px;/*gap gère l'espacement entre les éléments dans flex, grid et columns*/
 }
 
