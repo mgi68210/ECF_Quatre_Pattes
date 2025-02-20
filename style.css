@@ -282,7 +282,7 @@ nav a:hover {
   text-align: left;
   display: flex;/*assure que les éléments fils directs seront alignés sur une ligne*/
   flex-direction: column;
-  justify-content: center;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
+  justify-content:flex-start;/*Aligne les éléments sur l'axe principal (souvent horizontal en flexbox)*/
 }
 
 /* Titre texte à droite  */
@@ -290,6 +290,8 @@ nav a:hover {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 1px; /*Marge du bas*/
+  text-align: left;
+
 }
 
 /* Paragraphe du texte à droite */
@@ -328,7 +330,7 @@ nav a:hover {
 .big-image-container {
   position: relative;/*s’ajuster à partir de sa position normale*/
   width: 100%;
-  height: 400px;
+  height: 500px;
   border-radius: 10px; /* Arrondit légèrement les coins */
   overflow: hidden; /*masque le débordement de contenu*/
   margin: 5px; /* Ajoute une petite marge */

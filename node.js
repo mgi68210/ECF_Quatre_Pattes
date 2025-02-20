@@ -28,13 +28,12 @@ function incrementer(){
 
 }
 
+        //SECTION 2
 
+// Variables avec le stock des identifiants des éléments sélectionnés
+let idCarteSelectionnee = ""; // Id du montant sélectionné
+let idOptionSelectionnee = ""; // Id de la fréquence sélectionnée
 
-        // SECTION 2
-
-    // Variables avec le stock des identifiants des éléments sélectionnés
-    let idCarteSelectionnee = "";
-    let idOptionSelectionnee = "";
 
 function selectDon(idCarte) {
 // Fonction appelée lorsqu'une carte de don est sélectionnée, l'idCarte est d'id de la carte de don sélectionnée.
@@ -47,58 +46,75 @@ function selectDon(idCarte) {
     idCarteSelectionnee = idCarte;
     //Et donc on met à jour l'id de la carte de don sélectionnée
 
+    // On met à jour le texte du bouton "don" en fonction des sélections
+    updateDonButton();
 }
 
 function selectOption(idOption) {
 // Fonction appelée lorsqu'une option de fréquence est sélectionnée, l'idOption est d'id de la carte de don sélectionnée.
-
     if (idOptionSelectionnee !== "") {
         document.getElementById(idOptionSelectionnee).classList.remove("active");
-        // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
-
+         // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
     }
-
     document.getElementById(idOption).classList.add("active");
     // En conséquence, on ajoute la classe 'active' à la nouvelle option de fréquence sélectionnée
     idOptionSelectionnee = idOption;
-    //Et donc on met à jour l'id de l'option de fréquence sélectionnée
+     //Et donc on met à jour l'id de l'option de fréquence sélectionnée
 
+    updateDonButton();
+    // On met à jour le texte du bouton "don" en fonction des sélections
+}
+
+function updateDonButton() {
+// Fonction appelée pour mettre à jour le bouton "don"
+    if (idCarteSelectionnee !== "" && idOptionSelectionnee !== "") {
+    //On vérifie si une carte et une option ont bien été sélectionnées
+
+        let carteSelectionnee = document.getElementById(idCarteSelectionnee);
+        // On récupérer la carte sélectionnée
+
+        let montant = carteSelectionnee.querySelector("strong").innerHTML;
+        // On Obtient le montant du don à partir de l'élément <strong> dans la carte, affiché dans le html
+
+        let optionSelectionnee = document.getElementById(idOptionSelectionnee);
+        // On récupère l'option sélectionnée
+
+        let frequence = optionSelectionnee.innerHTML;
+        // On obtient la fréquence à partir du texte de l'option sélectionnée
+
+        let donButton = document.querySelector('.don-button');
+        // On sectionne avec queryselector le bouton "don" pour mettre à jour son texte
+
+        donButton.innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don de ${montant} ${frequence}`;
+        // On met à jour le texte du bouton avec le montant et la fréquence sélectionnés
+
+    }
 }
 
 function confirmDon() {
-    // Une fonction est appelée lors de la confirmation de don, pour se faire il faut verifier que la carte de don et l'option de fréquence ont été sectionné
-
+ // Une fonction est appelée lors de la confirmation de don, pour se faire il faut verifier que la carte de don et l'option de fréquence ont été sectionné
     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
         // On vérifie bien si une carte et une option ont été sélectionnées
         alert("Veuillez sélectionner un montant et une fréquence.");
-        // Sinon on affiche un message d'alerte
-        return; //On arrête l'exécution de la fonction s'il manque une selection
-
+        // Sinon on affiche un message d'alerte si aucune carte ou option n'est sélectionnée
+        return;  //On arrête l'exécution de la fonction s'il manque une selection
     }
 
-    let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-    // On récupère l'id de la carte sélectionnée
-    let montant = carteSelectionnee.querySelector("strong").innerHTML;
-    // On cherche le montant du don en récupérant l'élément <strong> (qui se trouve dans le html) de la carte
-
-    let optionSelectionnee = document.getElementById(idOptionSelectionnee);
-    // On récupère l'id de l'option sélectionnée
-    let frequence = optionSelectionnee.innerHTML;
-    // On récupère la frequence, le texte de l'option se trouvant dans l'html 
-
-    let donButton = document.querySelector('.don-button');
-    donButton.innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don de ${montant} ${frequence}`;
-    //Je mets à jour le texte du bouton de don 
-
-
     incrementer(); 
-    // J'appelle la fonction au dessus, celle du header, nommée 'incrementer' pour pouvour mettre le resultat dans le bouton de l'en tête "faire un don"
-   
+    // Appelle la fonction d'incrémentation pour mettre à jour le bouton en haut
 
-    // Réinitialisation du montant et de la fréquence
-    // On enlève les sélections
+    let carteSelectionnee = document.getElementById(idCarteSelectionnee);
+    let optionSelectionnee = document.getElementById(idOptionSelectionnee);
+    // On Récupére la carte et l'option sélectionnée grâce au getElementById pour réinitialiser les sélections
+
+
     carteSelectionnee.classList.remove("selected");
     optionSelectionnee.classList.remove("active");
+    // On retire aux selections les classes 'selected' et 'active' présentent dans le css
+
+    idCarteSelectionnee = "";
+    idOptionSelectionnee = "";
+    // Enfin, on réinitialise les id des sélections pour qu'ils soient vides
 
 }
 
@@ -148,16 +164,16 @@ function repondre(correct, id) {
     
         if (correct) {
         // J'applique des styles en fonction d'une réponse vraie
-            message.style.background = " #057858";
-            message.style.color = "white";
+            message.style.background = " #eafaf1";
+            message.style.color = "black";
             message.style.textAlign = "left";
             message.style.padding = "10px 20px";
             message.style.border = "none";
             message.style.borderRadius = "5px";
 
         } else {// J'applique des styles en fonction d'une réponse fausse
-            message.style.background = "#DB2727";
-            message.style.color = "white";
+            message.style.background = "#FAE3E3";
+            message.style.color = "black";
             message.style.textAlign = "left";
             message.style.padding = "10px 20px";
             message.style.border = "none";
