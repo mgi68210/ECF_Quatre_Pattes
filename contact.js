@@ -4,14 +4,14 @@
         //BOUTON "FAIRE UN DON" DANS LE HEADER
 
 
-let compteur = 0; 
-// j'initialise le compteur à 0
+    let compteur = 0; 
+    // j'initialise le compteur à 0
 
-   function incrementer(){
+function incrementer(){
 // Je crée une fonction nommer incrementer qui augmentera la valeur de 1 et met à jour l'affichage dans html
 
-    compteur++;     // Incrémente la valeur de 1 au compteur
-    let display = document.getElementById("display");     // Appelle l'élément html avec l'id display
+    compteur++; // Incrémente la valeur de 1 au compteur
+    let display = document.getElementById("display"); // Appelle l'élément html avec l'id display
     document.getElementById("display").style.color = " #DB2727";
     document.getElementById("display").style.fontWeight="bold"; 
     document.getElementById("display").style.fontSize="15px";  
@@ -28,8 +28,8 @@ let compteur = 0;
 
         // FORMULAIRE
 
-// J'ajoute un écouteur d'événement sur le formulaire, avec l'ID 'contactForm', pour capturer sa soumission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // J'ajoute un écouteur d'événement sur le formulaire, avec l'ID 'contactForm', pour capturer sa soumission
     e.preventDefault(); // Empêche le rechargement de la page lors de la soumission du formulaire
     validationForm(); // J'appelle la fonction de validation du formulaire
 });

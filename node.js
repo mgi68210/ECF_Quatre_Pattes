@@ -4,10 +4,10 @@
         //BOUTON "FAIRE UN DON" DANS LE HEADER
 
 
-let compteur = 0; 
-// j'initialise le compteur à 0
+    let compteur = 0; 
+    // j'initialise le compteur à 0
 
-   function incrementer(){
+function incrementer(){
 // Je crée une fonction nommer incrementer qui augmentera la valeur de 1 et met à jour l'affichage dans html
 
     compteur++;     // Incrémente la valeur de 1 au compteur
@@ -32,9 +32,9 @@ let compteur = 0;
 
         // SECTION 2
 
-// Variables avec le stock des identifiants des éléments sélectionnés
-let idCarteSelectionnee = "";
-let idOptionSelectionnee = "";
+    // Variables avec le stock des identifiants des éléments sélectionnés
+    let idCarteSelectionnee = "";
+    let idOptionSelectionnee = "";
 
 function selectDon(idCarte) {
 // Fonction appelée lorsqu'une carte de don est sélectionnée, l'idCarte est d'id de la carte de don sélectionnée.
@@ -101,13 +101,13 @@ function confirmDon() {
             //SECTION 4
 
 
-    function ok(image, titre, description, date) {
-            // Fonction qui, en cliquant, met à jour la source de l'élément principal avec le chemin fourni en appelant les id
+function ok(image, titre, description, date) {
+// Fonction qui, en cliquant, met à jour la source de l'élément principal avec le chemin fourni en appelant les id
 
-        document.getElementById("big").src = image; // Met à jour la source de l'image principale
-        document.getElementById("big-title").textContent = titre;  // Met à jour le titre associé à l'image
-        document.getElementById("big-description").textContent = description; // Met à jour la description associée à l'image
-        document.getElementById("big-date").textContent = date; // Met à jour la date associée à l'image
+    document.getElementById("big").src = image; // Met à jour la source de l'image principale
+    document.getElementById("big-title").textContent = titre;  // Met à jour le titre associé à l'image
+    document.getElementById("big-description").textContent = description; // Met à jour la description associée à l'image
+    document.getElementById("big-date").textContent = date; // Met à jour la date associée à l'image
     }
 
 
@@ -129,11 +129,11 @@ function confirmDon() {
         "q1": "Chez Quatre Pattes, 85% des dons sont directement utilisés pour les animaux. Seuls 15% servent aux frais de fonctionnement essentiels.",
         "q2": "Nous accueillons tous les animaux, quel que soit leur état de santé. Chaque vie compte !",
         "q3": "Les besoins sont immenses et constants. Chaque don est précieux pour sauver plus d’animaux."
-    };
+};
     
-    function repondre(correct, id) {
-    // création d'une fonction qui est appelée lorsqu'une réponse est soumise
-    // réponse correct = indique si la réponse est correcte (true) ou incorrecte (false).
+function repondre(correct, id) {
+// création d'une fonction qui est appelée lorsqu'une réponse est soumise
+// réponse correct = indique si la réponse est correcte (true) ou incorrecte (false).
     // id =  Cest l'identifiant de l'élément HTML où le message sera affiché.
         let message = document.getElementById(id);
         // J'appelle l'élément HTML correspondant à l'id fourni
