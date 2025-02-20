@@ -58,6 +58,66 @@ function confirmDon() {
     incrementer(); 
 }
 
+// ANCIEN CODE
+// let idCarteSelectionnee = "";
+// let idOptionSelectionnee = "";
+
+// function selectDon(idCarte) {
+//     // Si une carte a déjà été sélectionnée, on retire la classe "selected" de l'ancienne carte
+//     if (idCarteSelectionnee !== "") {
+//         let ancienneCarte = document.getElementById(idCarteSelectionnee);
+//         ancienneCarte.classList.remove("selected");
+//     }
+
+//     // Ajout de la classe "selected" à la nouvelle carte sélectionnée
+//     let carte = document.getElementById(idCarte);
+//     carte.classList.add("selected");
+
+//     // Mise à jour de la variable idCarteSelectionnee pour mémoriser la carte sélectionnée
+//     idCarteSelectionnee = idCarte;
+// }
+
+// function selectOption(idOption) {
+//     // Si une option a déjà été sélectionnée, on retire la classe "active" de l'ancienne option
+//     if (idOptionSelectionnee !== "") {
+//         let ancienneOption = document.getElementById(idOptionSelectionnee);
+//         ancienneOption.classList.remove("active");
+//     }
+
+//     // Ajout de la classe "active" à la nouvelle option sélectionnée
+//     let option = document.getElementById(idOption);
+//     option.classList.add("active");
+
+//     // Mise à jour de la variable idOptionSelectionnee pour mémoriser l'option sélectionnée
+//     idOptionSelectionnee = idOption;
+// }
+
+// function confirmDon() {
+//     // Vérification que les deux éléments (carte et option) ont bien été sélectionnés
+//     if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
+//         alert("Veuillez sélectionner un montant et une fréquence.");
+//         return; // Si l'un des deux n'est pas sélectionné, on arrête la fonction et n'affiche pas l'alerte
+//     }
+
+//     // Récupération du montant de la carte sélectionnée
+//     let carteSelectionnee = document.getElementById(idCarteSelectionnee);
+//     let montant = carteSelectionnee.querySelector("strong").innerHTML; // On utilise querySelector pour cibler le <strong>
+
+//     // Récupération de la fréquence de l'option sélectionnée
+//     let optionSelectionnee = document.getElementById(idOptionSelectionnee);
+//     let frequence = optionSelectionnee.innerHTML;
+
+//     // Affichage d'une alerte avec les informations sélectionnées
+//     alert("Vous avez choisi un don de " + montant + " avec une fréquence de " + frequence + ".");
+
+//     // Appel de la fonction incrementer pour augmenter un compteur (si nécessaire)
+//     incrementer(); 
+// }
+
+
+
+
+
 
     //SECTION 4
 
