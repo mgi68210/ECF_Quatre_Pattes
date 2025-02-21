@@ -1,11 +1,10 @@
                                 // CODE JAVASCRIPT POUR LA PAGE ACCUEIL
 
-
         //BOUTON "FAIRE UN DON" DANS LE HEADER
 
 
-    let compteur = 0; 
-    // j'initialise le compteur à 0
+let compteur = 0; 
+// j'initialise le compteur à 0
 
 function incrementer(){
 // Je crée une fonction nommer incrementer qui augmentera la valeur de 1 et met à jour l'affichage dans html
@@ -25,97 +24,129 @@ function incrementer(){
     display.style.fontSize = "15px";  
     display.style.backgroundColor = "white";
     display.style.borderRadius = "20%";
-
+    
 }
 
-        //SECTION 2
+        // SECTION 2
 
-// Variables avec le stock des identifiants des éléments sélectionnés
-let idCarteSelectionnee = ""; // Id du montant sélectionné
-let idOptionSelectionnee = ""; // Id de la fréquence sélectionnée
+// Variables pour stocker les identifiants des éléments sélectionnés
+
+let idCarteSelectionnee = ""; // Je déclare une variable pour l'ID du montant sélectionné
+let idOptionSelectionnee = ""; // Je déclare une variable pour l'ID de la fréquence sélectionnée
 
 
 function selectDon(idCarte) {
-// Fonction appelée lorsqu'une carte de don est sélectionnée, l'idCarte est d'id de la carte de don sélectionnée.
-    if (idCarteSelectionnee !== "") {
-    document.getElementById(idCarteSelectionnee).classList.remove("selected");
-    // SI on clique sur une autre carte de don, on retire la classe 'selected' (qui se trouve dans le css) de cette carte
-    }
-    document.getElementById(idCarte).classList.add("selected");
-    // En conséquence, on ajoute la classe 'selected' à la nouvelle carte de don sélectionnée
-    idCarteSelectionnee = idCarte;
-    //Et donc on met à jour l'id de la carte de don sélectionnée
+// Fonction appelée pour sélectionner une carte de don
 
-    // On met à jour le texte du bouton "don" en fonction des sélections
-    updateDonButton();
+    if (idCarteSelectionnee) {
+    // Je vérifie si une carte de don était déjà sélectionnée
+
+
+    document.getElementById(idCarteSelectionnee).classList.remove("selected");
+    // Si oui, je retire la classe 'selected' de l'ancienne carte
+    // pour enlever le style visuel de sélection
+    }
+
+    document.getElementById(idCarte).classList.add("selected");
+    // J'ajoute la classe 'selected' à la nouvelle carte sélectionnée
+    // pour changer son apparence et indiquer qu'elle est sélectionnée
+
+    idCarteSelectionnee = idCarte;
+    // Je mets à jour la variable idCarteSelectionnee avec l'identifiant de la carte actuellement sélectionnée
+
+
+    updateAffichageSelection();
+    // Je mets à jour l'affichage du montant et de la fréquence après la sélection de la carte de don
+
 }
 
 function selectOption(idOption) {
-// Fonction appelée lorsqu'une option de fréquence est sélectionnée, l'idOption est d'id de la carte de don sélectionnée.
-    if (idOptionSelectionnee !== "") {
-    document.getElementById(idOptionSelectionnee).classList.remove("active");
-    // SI on clique sur une autre option de fréquence , on retire la classe 'active' (qui se trouve dans le css) de cette option
-    }
-    document.getElementById(idOption).classList.add("active");
-    // En conséquence, on ajoute la classe 'active' à la nouvelle option de fréquence sélectionnée
-    idOptionSelectionnee = idOption;
-     //Et donc on met à jour l'id de l'option de fréquence sélectionnée
+// Fonction appelée pour sélectionner une option de fréquence
 
-    updateDonButton();
-    // On met à jour le texte du bouton "don" en fonction des sélections
+    if (idOptionSelectionnee) {
+    // Je vérifie si une option de fréquence était déjà sélectionnée
+
+
+    document.getElementById(idOptionSelectionnee).classList.remove("active");
+    // Si oui, je retire la classe 'active', présente en css, de l'ancienne option
+    // pour enlever le style visuel de sélection
+    }
+
+    document.getElementById(idOption).classList.add("active");
+    // J'ajoute la classe 'active', présente en css, à la nouvelle option sélectionnée
+    // pour changer son apparence et indiquer qu'elle est sélectionnée
+
+    idOptionSelectionnee = idOption;
+    // Je mets à jour la variable idOptionSelectionnee avec l'identifiant de l'option actuellement sélectionnée
+
+    updateAffichageSelection();
+    // Je mets à jour l'affichage du montant et de la fréquence après la sélection de l'option de fréquence
+
 }
 
-function updateDonButton() {
-// Fonction appelée pour mettre à jour le bouton "don"
-    if (idCarteSelectionnee !== "" && idOptionSelectionnee !== "") {
-    //On vérifie si une carte et une option ont bien été sélectionnées
+function AffichageSelection() {
+// Fonction pour mettre à jour l'affichage du montant et de la fréquence sélectionnés
 
-        let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-        // On récupérer la carte sélectionnée
+    let montant = ""; 
+    // Je déclare une variable pour le montant sélectionné
 
-        let montant = carteSelectionnee.querySelector("strong").innerHTML;
-        // On Obtient le montant du don à partir de l'élément <strong> dans la carte, affiché dans le html
+    let frequence = ""; 
+    // Je déclare une variable pour la fréquence sélectionnée
 
-        let optionSelectionnee = document.getElementById(idOptionSelectionnee);
-        // On récupère l'option sélectionnée
 
-        let frequence = optionSelectionnee.innerHTML;
-        // On obtient la fréquence à partir du texte de l'option sélectionnée
+    if (idCarteSelectionnee) {
+    // Je vérifie si une carte de don a été sélectionnée
 
-        let donButton = document.querySelector('.don-button');
-        // On sectionne avec queryselector le bouton "don" pour mettre à jour son texte
-
-        donButton.innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don de ${montant} ${frequence}`;
-        // On met à jour le texte du bouton avec le montant et la fréquence sélectionnés
+    montant = document.getElementById(idCarteSelectionnee).querySelector("strong").textContent; 
+    // Je récupère le montant de la carte sélectionnée 
+    // en utilisant l'élément <strong> présent dans le html
 
     }
+
+    if (idOptionSelectionnee) {
+    // Je vérifie si une option de fréquence a été sélectionnée
+
+    frequence = document.getElementById(idOptionSelectionnee).textContent; 
+    // Je récupère le texte de l'option de fréquence sélectionnée
+
+    }
+
+    
+    document.querySelector(".don-button").innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don : ${montant || "Sélectionnez un montant"} / ${frequence || "Sélectionnez une fréquence"}`;
+    // Je mets à jour le contenu du bouton "don" avec le montant et la fréquence sélectionnés
+    // J'utilise l'opérateur || pour afficher un message par défaut si aucune sélection n'est faite
 }
 
 function confirmDon() {
- // Une fonction est appelée lors de la confirmation de don, pour se faire il faut verifier que la carte de don et l'option de fréquence ont été sectionné
-    if (idCarteSelectionnee === "" || idOptionSelectionnee === "") {
-        // On vérifie bien si une carte et une option ont été sélectionnées
-        alert("Veuillez sélectionner un montant et une fréquence.");
-        // Sinon on affiche un message d'alerte si aucune carte ou option n'est sélectionnée
-        return;  //On arrête l'exécution de la fonction s'il manque une selection
+// Fonction appelée lors du clic sur le bouton "Faire un don"
+
+    if (!idCarteSelectionnee && !idOptionSelectionnee) {
+    // Je vérifie si aucune sélection n'a été faite
+
+    alert("Veuillez sélectionner un montant et une fréquence pour continuer.");
+    // Si aucune carte de don et aucune option de fréquence n'ont été sélectionnées,
+    // je fais apparaître une alerte demandant à l'utilisateur de sélectionner un montant et une fréquence
+
+    } else if (idCarteSelectionnee && !idOptionSelectionnee) {
+        // Si une carte de don a été sélectionnée mais PAS d'option de fréquence,
+
+        alert("Veuillez sélectionner une fréquence pour continuer.");
+        // je fais apparaître une alerte demandant à l'utilisateur de sélectionner une fréquence
+
+    } else if (!idCarteSelectionnee && idOptionSelectionnee) {
+        // Si une option de fréquence a été sélectionnée mais PAS de carte de don,
+        alert("Veuillez sélectionner un montant pour continuer.");
+        // je fais apparaître une alerte demandant à l'utilisateur de sélectionner un montant
+
+    } else if (idCarteSelectionnee && idOptionSelectionnee) {
+        // Si les deux sélections (carte de don et option de fréquence) sont faites,
+        alert(`Vous avez sélectionné un don de ${document.getElementById(idCarteSelectionnee).querySelector("strong").textContent}/${document.getElementById(idOptionSelectionnee).textContent}.`);
+        // je fais apparaître un message de confirmation avec les détails du don
+        
+        incrementer(); // J'incrémente le compteur uniquement si les deux sélections sont cliquées
+        // Je lie les deux boutons dons ici après confirmation
+
     }
-
-    incrementer(); 
-    // Appelle la fonction d'incrémentation pour mettre à jour le bouton en haut
-
-    let carteSelectionnee = document.getElementById(idCarteSelectionnee);
-    let optionSelectionnee = document.getElementById(idOptionSelectionnee);
-    // On Récupére la carte et l'option sélectionnée grâce au getElementById pour réinitialiser les sélections
-
-
-    carteSelectionnee.classList.remove("selected");
-    optionSelectionnee.classList.remove("active");
-    // On retire aux selections les classes 'selected' et 'active' présentent dans le css
-
-    idCarteSelectionnee = "";
-    idOptionSelectionnee = "";
-    // Enfin, on réinitialise les id des sélections pour qu'ils soient vides
-
 }
 
 
@@ -180,9 +211,9 @@ function repondre(correct, id) {
         }
     
         if (correct) {
-            message.textContent = "Vrai ! " + reponses[id]; // Affiche le message d'une réponse vrai en fonction de l'id
+            message.textContent = "✔️Vrai ! " + reponses[id]; // Affiche le message d'une réponse vrai en fonction de l'id
         } else {
-            message.textContent = "Faux ! " + reponses[id]; // Affiche le message d'une réponse fausse en fonction de l'id
+            message.textContent = "❌Faux ! " + reponses[id]; // Affiche le message d'une réponse fausse en fonction de l'id
         }
     
         if (correct) score++; // Incrémente le compteur de score
