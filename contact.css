@@ -29,10 +29,18 @@
     align-items: center; /*Aligne tous les enfants d'un conteneur le long de l'axe transversal.*/
     gap: 8px; /*espace entre grille et colonne*/
   }
+
+  .logo-header a {
+    display: flex; /* Ca assure que le logo soit bien aligné */
+    align-items: center; 
+    text-decoration: none; 
+}
+
   .logo {
     font-weight: bold; 
     color: white; 
     font-size: 18px;
+    margin-left: 8px;
   }
   
   /* CONTENU À DROITE */
