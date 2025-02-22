@@ -55,7 +55,7 @@ function selectDon(idCarte) {
     // Je mets à jour la variable idCarteSelectionnee avec l'identifiant de la carte actuellement sélectionnée
 
 
-    updateAffichageSelection();
+    AffichageSelection();
     // Je mets à jour l'affichage du montant et de la fréquence après la sélection de la carte de don
 
 }
@@ -79,7 +79,7 @@ function selectOption(idOption) {
     idOptionSelectionnee = idOption;
     // Je mets à jour la variable idOptionSelectionnee avec l'identifiant de l'option actuellement sélectionnée
 
-    updateAffichageSelection();
+    AffichageSelection();
     // Je mets à jour l'affichage du montant et de la fréquence après la sélection de l'option de fréquence
 
 }
