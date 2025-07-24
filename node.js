@@ -142,7 +142,8 @@ function confirmDon() {
 
     } else if (idCarteSelectionnee && idOptionSelectionnee) {
         // Si les deux sélections (carte de don et option de fréquence) sont faites,
-        alert(`Vous avez sélectionné un don de ${document.getElementById(idCarteSelectionnee).querySelector("strong").textContent}/${document.getElementById(idOptionSelectionnee).textContent}.`);
+        alert(`Vous avez sélectionné un don de ${document.getElementById(idCarteSelectionnee).querySelector("strong").textContent}/
+        ${document.getElementById(idOptionSelectionnee).textContent}.`);
         // je fais apparaître un message de confirmation avec les détails du don
         
         incrementer(); // J'incrémente le compteur uniquement si les deux sélections sont cliquées
