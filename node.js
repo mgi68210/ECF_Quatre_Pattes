@@ -112,7 +112,9 @@ function AffichageSelection() {
     }
 
     
-    document.querySelector(".don-button").innerHTML = `<img src="./images/heart.PNG" alt="heart icon"> Faire un don : ${montant || "Sélectionnez un montant"} / ${frequence || "Sélectionnez une fréquence"}`;
+    document.querySelector(".don-button").innerHTML = 
+    `<img src="./images/heart.PNG" alt="heart icon"> Faire un don :
+    ${montant || "Sélectionnez un montant"} / ${frequence || "Sélectionnez une fréquence"}`;
     // Je mets à jour le contenu du bouton "don" avec le montant et la fréquence sélectionnés
     // J'utilise l'opérateur || pour afficher un message par défaut si aucune sélection n'est faite
 }
